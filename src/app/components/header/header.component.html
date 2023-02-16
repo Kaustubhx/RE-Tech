@@ -1,0 +1,48 @@
+<ion-header id="header" class="ion-no-border bg-[rgb(36,36,36)]">
+    <ion-grid class="flex flex-wrap items-center justify-between max-w-7xl p-6 text-white">
+        <ion-row class="flex justify-center w-full mb-2">
+            <ion-text id="logo" class="text-2xl block font-semibold text-center">
+                Logo
+            </ion-text>
+        </ion-row>
+
+        <ion-row class="flex items-center">
+            <ion-row class="space-x-4">
+                <ion-row class="dropdown">
+                    <ion-button class="dropBtn" (click)="toggleProjects()">Projects</ion-button>
+                    <ion-row class="dropdown-content" [ngClass]="{'block': showProjects == true}">
+                        <ul class="space-y-2">
+                            <ion-text class="font-semibold text-sm">
+                                Top Projects
+                            </ion-text>
+                            <li class="text-[12.5px]">New Projects In Mulund</li>
+                            <li class="text-[12.5px]">Ready To Movie Projects In Mulund</li>
+                            <li class="text-[12.5px]">Under Construction Projects In Mulund</li>
+                        </ul>
+                    </ion-row>
+                </ion-row>
+
+                <ion-row class="dropdown">
+                    <ion-button class="dropBtn" (click)="toggleServices()">More Services</ion-button>
+                    <ion-row class="dropdown-content" [ngClass]="{'block': showServices == true}">
+                        <ul class="space-y-2">
+                            <ion-text class="font-semibold text-sm">
+                                Top Searchs
+                            </ion-text>
+                            <li class="text-[12.5px]">New Projects In Mulund</li>
+                            <li class="text-[12.5px]">Ready To Movie Projects In Mulund</li>
+                            <li class="text-[12.5px]">Under Construction Projects In Mulund</li>
+                        </ul>
+                    </ion-row>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+
+        <ion-row class="">
+            <ion-button class="referalBtn">
+                Join the Referal Program
+            </ion-button>
+        </ion-row>
+
+    </ion-grid>
+</ion-header>

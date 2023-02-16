@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .dropdown {
+        @apply relative inline-block
+    }
+
+    .show-project-dropdown {
+        @apply !block
+    }
+
+    .show-dropdown {
+        @apply !block
+    }
+
+    .dropdown-content {
+        @apply hidden absolute z-10 bg-gray-700 min-w-[200px] text-sm
+    }
+    
+
+}

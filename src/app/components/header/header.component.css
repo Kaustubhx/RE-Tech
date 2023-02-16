@@ -1,0 +1,25 @@
+.dropBtn {
+    --background: transparent;
+    text-transform: capitalize;
+    font-size: 13.5px;
+    --box-shadow: none;
+    margin: 0;
+    --ripple-color: transparent;
+    --padding-start: 0 !important;
+    --padding-end: 0 !important;
+    --padding-top: 0 !important;
+    --padding-bottom: 0 !important;
+}
+
+.referalBtn {
+    --background: transparent
+    --box-shadow: none;
+    --padding-start: 0 !important;
+    --padding-end: 0 !important;
+    --padding-top: 0 !important;
+    --padding-bottom: 0 !important;
+
+    text-transform: capitalize;
+    font-size: 13.5px;
+    margin: 0;
+}
