@@ -9,16 +9,9 @@
         @apply relative inline-block
     }
 
-    .show-project-dropdown {
-        @apply !block
-    }
-
-    .show-dropdown {
-        @apply !block
-    }
 
     .dropdown-content {
-        @apply hidden absolute z-10 bg-gray-700 min-w-[200px] text-sm
+        @apply hidden p-2 rounded-lg absolute z-10 bg-gray-700 min-w-[200px] text-sm mt-3
     }
     
 
