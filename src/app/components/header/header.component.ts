@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   toggleProjects(): void {
     this.showProjects = !this.showProjects
   }
-
+  
   showServices = false;
   toggleServices(): void {
     this.showServices = !this.showServices

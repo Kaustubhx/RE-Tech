@@ -7,12 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { HomePageComponent } from './pages/homepage/homepage.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BannerComponent } from './components/banner/banner.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    HeaderComponent
+    HeaderComponent,
+    BannerComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
