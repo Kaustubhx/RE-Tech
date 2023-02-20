@@ -1,0 +1,78 @@
+.hero_wrapper {
+    /* background: #eee; */
+}
+
+.hero_contents {
+    display: flex;
+    justify-content: center;
+
+    max-width: 80rem;
+    margin: -6rem auto 0 auto;
+    padding: 1.25rem;
+    padding-bottom: 0;
+}
+
+.searchBar_wrapper {
+    background-color: #eee;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBarTxt {
+    font-size: 1.125rem;
+    font-weight: 600;
+
+    padding: 1.25rem;
+}
+
+.searchBar {
+    --background: #f3f4f6;
+    --box-shadow: none;
+
+    border: solid 1px #d6d6d6;
+    width: 14rem;
+    position: relative;
+    padding: 0px auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.custonSearchIcon {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    z-index: 1;
+    left: 25px;
+}
+
+.searchBtn {
+    --background: black;
+
+    width: 10rem;
+    height: 3rem;
+    margin-left: .6rem;
+}
+
+@media (min-width: 768px) {
+    .searchBarTxt {
+        font-size: 1.5rem;
+        /* 24px */
+        line-height: 2rem;
+        /* 32px */
+        font-weight: 500;
+        width: 100%;
+
+        padding-bottom: 1rem !important;
+        padding: 0;
+    }
+
+    .searchBar {
+        width: 20rem;
+        height: 3.8rem;
+    }
+}
