@@ -1,0 +1,47 @@
+.footer_wrapper {
+    background-color: black;
+    margin-top: 6rem;
+}
+
+.footer_container {
+    max-width: 80rem;
+    padding: 1.25rem;
+    margin: 0 auto;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.about_section,
+.resources_section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.aboutSection_contents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.companyInfo {
+    margin-top: 1.25rem;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.aboutUs_section {
+    margin-bottom: 1.25rem;
+    max-width: 25rem;
+}
+
+.contactCompany_section {
+    flex-direction: column;
+}

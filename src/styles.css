@@ -8,6 +8,13 @@
     padding: 0;
 }
 
+.searchbar-input.sc-ion-searchbar-md {
+    border-radius: 0.5rem;
+    background-color: #f3f4f6;
+    padding: 0px 45px;
+    height: 3rem;
+}
+
 /* @layer components {
 
     .dropdown {
