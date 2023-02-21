@@ -16,8 +16,9 @@ import { faRupeeSign } from '@fortawesome/free-solid-svg-icons';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FooterComponent } from './components/footer/footer.component';
-// import { NgImageSliderModule } from 'ng-image-slider';
+import { ProjectdetailpageComponent } from './pages/projectdetailpage/projectdetailpage.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +28,14 @@ import { FooterComponent } from './components/footer/footer.component';
     BannerComponent,
     SearchComponent,
     ShowcaseComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectdetailpageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     IonicModule.forRoot(),
     FontAwesomeModule,
-    // NgImageSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -42,6 +43,6 @@ import { FooterComponent } from './components/footer/footer.component';
 export class AppModule {
 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faChevronDown, faLocationArrow, faHome, faRupeeSign, faLongArrowAltRight, farHeart);
+    library.addIcons(faChevronDown, faLocationArrow, faHome, faRupeeSign, faLongArrowAltRight, farHeart, faWhatsapp);
   }
 }
