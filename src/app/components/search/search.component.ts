@@ -7,7 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.callFunction();
+  }
+
+  searchOptions = ['Locatlity', 'Builder', 'City', 'Project', 'Reviews', 'Budget'];
+
+  callFunction() {
+    setInterval(() => {
+      let dynamicSearchBar: any = document.querySelector('.searchBar');
+      let randomOption = Math.floor(Math.random() * (this.searchOptions.length));
+      if (randomOption != null) {
+        dynamicSearchBar.placeholder = `Search By ${this.searchOptions[randomOption]}`
+      }
+    }, 5000)
+  }
 
   ngOnInit(): void {
   }

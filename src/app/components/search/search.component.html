@@ -1,21 +1,26 @@
 <ion-grid class="hero_wrapper">
     <ion-row class="hero_contents">
         <ion-row class="searchBar_wrapper">
-            <ion-text class="searchBarTxt">
-                Search The Estate Suits You
-            </ion-text>
 
-            <ion-row id="searchBars_container" class="items-center md:space-x-4">
-                <ion-searchbar class="searchBar" searchIcon=“undefined” placeholder="Location">
-                    <fa-icon class="custonSearchIcon" icon="location-arrow"></fa-icon>
-                </ion-searchbar>
+            <ion-row class="md:w-full">
+                <ion-text class="searchBarTxt">
+                    Search The Estate Suits You
+                </ion-text>
+            </ion-row>
 
-                <ion-searchbar class="searchBar" searchIcon=“undefined” placeholder="Type">
-                    <fa-icon class="custonSearchIcon" icon="home"></fa-icon>
-                </ion-searchbar>
+            <ion-row id="searchBar_container" class="items-center md:space-x-4 md:w-full flex-nowrap">
+                <ion-searchbar class="searchBar">
+                    <ion-row class="searchOption_dropdowns space-x-4 mr-4">
+                        <ion-text>
+                            Budget
+                            <fa-icon icon="chevron-down"></fa-icon>
+                        </ion-text>
 
-                <ion-searchbar class="searchBar" searchIcon=“undefined” placeholder="Budget">
-                    <fa-icon class="custonSearchIcon" icon="rupee-sign"></fa-icon>
+                        <ion-text>
+                            Type
+                            <fa-icon icon="chevron-down"></fa-icon>
+                        </ion-text>
+                    </ion-row>
                 </ion-searchbar>
 
                 <ion-button class="searchBtn">
