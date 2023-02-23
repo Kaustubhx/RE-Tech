@@ -18,84 +18,133 @@
         </ion-row>
 
         <ion-row class="project_carouselWrapper">
-            <ion-row class="projectCard">
-                <ion-img src="'../../../../../assets/images/propyDemo2.jpg" class="projectImage"></ion-img>
+            <ion-content>
+                <ion-slides [options]="projectSlideOpt">
+                    <ion-slide *ngFor="let project of demoProjects">
+                        <ion-row class="projectCard">
+                            <ion-img [src]="project.projectImg" class="projectImage"></ion-img>
 
-                <ion-row class="projectDetails_container">
-                    <ion-text class="projectName">
-                        Amaze Tower
+                            <ion-row class="projectDetails_container">
+                                <ion-text class="projectName">
+                                    {{project.projectName}}
+                                </ion-text>
+                                <ion-text class="projectLocation">
+                                    {{project.projectLocation}}
+                                </ion-text>
+
+                                <ion-row class="projectPrice_Stat">
+                                    <ion-text class="projectPrice">
+                                        ₹{{project.priceTo}} To {{project.priceFrom}}
+                                    </ion-text>
+                                    <ion-text class="projectStatus text-sm">
+                                        {{project.projectStatus}}
+                                    </ion-text>
+                                </ion-row>
+
+                                <ion-row class="projectDimensions">
+                                    <ion-text class="projectBHK">
+                                        {{project.roomVariation}}
+                                    </ion-text>
+                                    <ion-text class="projectArea">
+                                        {{project.roomSize}}
+                                    </ion-text>
+                                </ion-row>
+
+                                <ion-row class="projectOhter_btns">
+                                    <ion-button class="WPbtn">
+                                        <fa-icon class="heartIcon" [icon]="['fab', 'whatsapp']"></fa-icon>
+                                        WhatsApp
+                                    </ion-button>
+
+                                    <ion-button class="detailsBtn" routerLink="/project">Details</ion-button>
+                                </ion-row>
+                            </ion-row>
+                        </ion-row>
+                    </ion-slide>
+                </ion-slides>
+            </ion-content>
+        </ion-row>
+
+
+
+        <!-- <ion-row class="projectCard">
+            <ion-img src="'../../../../../assets/images/propyDemo2.jpg" class="projectImage"></ion-img>
+
+            <ion-row class="projectDetails_container">
+                <ion-text class="projectName">
+                    Amaze Tower
+                </ion-text>
+                <ion-text class="projectLocation">
+                    WagleEstate, Thane
+                </ion-text>
+
+                <ion-row class="projectPrice_Stat">
+                    <ion-text class="projectPrice">
+                        ₹46L To 58.5 L
                     </ion-text>
-                    <ion-text class="projectLocation">
-                        WagleEstate, Thane
+                    <ion-text class="projectStatus">
+                        New Launch
                     </ion-text>
-
-                    <ion-row class="projectPrice_Stat">
-                        <ion-text class="projectPrice">
-                            ₹46L To 58.5 L
-                        </ion-text>
-                        <ion-text class="projectStatus">
-                            New Launch
-                        </ion-text>
-                    </ion-row>
-
-                    <ion-row class="projectDimensions">
-                        <ion-text class="projectBHK">
-                            3,4 BHK Flats
-                        </ion-text>
-                        <ion-text class="projectArea">
-                            1,480-2,100 SQ.FT (Carpet)
-                        </ion-text>
-                    </ion-row>
-
-                    <ion-row class="projectOhter_btns">
-                        <ion-button class="WPbtn">
-                            <fa-icon class="heartIcon" [icon]="['fab', 'whatsapp']"></fa-icon>
-                            WhatsApp
-                        </ion-button>
-
-                        <ion-button class="detailsBtn" routerLink="/project">Details</ion-button>
-                    </ion-row>
                 </ion-row>
-            </ion-row>
 
-            <ion-row class="projectCard">
-                <ion-img part="image" src="'../../../../../assets/images/propyDemo1.jpg" class="projectImage"></ion-img>
-
-                <ion-row class="projectDetails_container">
-                    <ion-text class="projectName">
-                        Queen Cottage
+                <ion-row class="projectDimensions">
+                    <ion-text class="projectBHK">
+                        3,4 BHK Flats
                     </ion-text>
-                    <ion-text class="projectLocation">
-                        Palghar, Thane
+                    <ion-text class="projectArea">
+                        1,480-2,100 SQ.FT (Carpet)
                     </ion-text>
+                </ion-row>
 
-                    <ion-row class="projectPrice_Stat">
-                        <ion-text class="projectPrice">
-                            ₹46 L To 51.2 L
-                        </ion-text>
-                        <ion-text class="projectStatus">
-                            New Launch
-                        </ion-text>
-                    </ion-row>
+                <ion-row class="projectOhter_btns">
+                    <ion-button class="WPbtn">
+                        <fa-icon class="heartIcon" [icon]="['fab', 'whatsapp']"></fa-icon>
+                        WhatsApp
+                    </ion-button>
 
-                    <ion-row class="projectDimensions">
-                        <ion-text class="projectBHK">
-                            2 BHK Flats
-                        </ion-text>
-                        <ion-text class="projectArea">
-                            1,480-2,100 SQ.FT (Carpet)
-                        </ion-text>
-                    </ion-row>
-
-                    <ion-row class="projectOhter_btns">
-                        <ion-button class="WPbtn">
-                            <fa-icon class="heartIcon" [icon]="['fab', 'whatsapp']"></fa-icon>
-                            WhatsApp
-                        </ion-button>
-                        <ion-button class="detailsBtn">Details</ion-button>
-                    </ion-row>
+                    <ion-button class="detailsBtn" routerLink="/project">Details</ion-button>
                 </ion-row>
             </ion-row>
         </ion-row>
+
+        <ion-row class="projectCard">
+            <ion-img part="image" src="'../../../../../assets/images/propyDemo1.jpg" class="projectImage"></ion-img>
+
+            <ion-row class="projectDetails_container">
+                <ion-text class="projectName">
+                    Queen Cottage
+                </ion-text>
+                <ion-text class="projectLocation">
+                    Palghar, Thane
+                </ion-text>
+
+                <ion-row class="projectPrice_Stat">
+                    <ion-text class="projectPrice">
+                        ₹46 L To 51.2 L
+                    </ion-text>
+                    <ion-text class="projectStatus">
+                        New Launch
+                    </ion-text>
+                </ion-row>
+
+                <ion-row class="projectDimensions">
+                    <ion-text class="projectBHK">
+                        2 BHK Flats
+                    </ion-text>
+                    <ion-text class="projectArea">
+                        1,480-2,100 SQ.FT (Carpet)
+                    </ion-text>
+                </ion-row>
+
+                <ion-row class="projectOhter_btns">
+                    <ion-button class="WPbtn">
+                        <fa-icon class="heartIcon" [icon]="['fab', 'whatsapp']"></fa-icon>
+                        WhatsApp
+                    </ion-button>
+                    <ion-button class="detailsBtn">Details</ion-button>
+                </ion-row>
+            </ion-row>
+        </ion-row> -->
+
     </ion-row>
 </ion-grid>

@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IonicModule } from '@ionic/angular';
+import { SwiperModule } from 'swiper/angular';
 import { HomePageComponent } from './pages/homepage/homepage.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
@@ -29,13 +31,15 @@ import { ProjectdetailpageComponent } from './pages/projectdetailpage/projectdet
     SearchComponent,
     ShowcaseComponent,
     FooterComponent,
-    ProjectdetailpageComponent
+    ProjectdetailpageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     IonicModule.forRoot(),
     FontAwesomeModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -57,11 +57,20 @@
 }
 
 .project_carouselWrapper {
-    justify-content: center;
+    height: 26rem;
+}
+
+ion-slides {
+    height: 100%;
+}
+
+ion-slide {
+    width: fit-content !important;
 }
 
 .projectCard {
     min-width: 18rem;
+    max-width: 20rem;
 
     margin: 1.25rem 0rem;
     border-radius: 0.5rem;
@@ -69,7 +78,7 @@
 }
 
 .projectImage {
-    max-height: 15rem;
+    max-height: 13rem;
     /* margin-right: 0.625rem; */
     width: 100%;
     transition: transform 450ms;
@@ -84,8 +93,7 @@ ion-img::part(image) {
 .projectDetails_container {
     display: flex;
     width: 100%;
-    padding: 1rem;
-    padding-top: 0;
+    padding: 0rem 1rem;
 
     background-color: #FFF;
 }
@@ -164,7 +172,6 @@ ion-img::part(image) {
 }
 
 @media (min-width: 768px) {
-    .showcase_container {
-        margin: 0 auto;
-    }
+    
+
 }

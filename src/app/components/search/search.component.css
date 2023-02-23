@@ -65,6 +65,7 @@
     }
 
     .hero_contents {
+        padding: 0 1.25rem;
         margin: 0 auto;
         margin-top: -4rem;
     }
