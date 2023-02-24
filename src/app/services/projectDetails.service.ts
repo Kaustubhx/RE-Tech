@@ -86,8 +86,6 @@ export class projectsDetails {
                     ]
                 }
             ]
-
-
         }
     ]
 }
