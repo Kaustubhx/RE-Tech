@@ -17,20 +17,29 @@ export class ShowcaseComponent implements OnInit {
   }
 
   projectSlideOpt = {
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
     slidesPerView: 1,
     // Responsive breakpoints
     breakpoints: {
       // when window width is >= 320px
       320: {
         slidesPerView: 1,
+        // spaceBetween: 82
       },
       // when window width is >= 480px
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
+        // spaceBetween: 47
       },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 4,
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 3
+      },
+      1440: {
+        slidesPerView: 4
       }
     }
   }
@@ -62,8 +71,20 @@ export class ShowcaseComponent implements OnInit {
     },
     {
       id: '3',
-      projectName: 'Queen Cottage',
-      projectImg: '../../../assets/images/propyDemo1.jpg',
+      projectName: 'Amaze Heights',
+      projectImg: '../../../assets/images/propyDemo3.jpg',
+      projectLocation: 'Palghar West, Thane',
+      priceTo: '23L',
+      priceFrom: '34L',
+      projectStatus: 'New Launch',
+      roomVariation: '2,3 BHK',
+      roomSize: '331 Sq.Ft (Carpet)',
+      alt: 'Demo2'
+    },
+    {
+      id: '3',
+      projectName: 'Queen Tower',
+      projectImg: '../../../assets/images/propyDemo4.jpg',
       projectLocation: 'Palghar West, Thane',
       priceTo: '23L',
       priceFrom: '34L',

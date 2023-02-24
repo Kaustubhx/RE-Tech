@@ -62,11 +62,12 @@
 
 ion-slides {
     height: 100%;
+    width: 100%;
 }
 
-ion-slide {
+/* ion-slide {
     width: fit-content !important;
-}
+} */
 
 .projectCard {
     min-width: 18rem;
@@ -95,6 +96,7 @@ ion-img::part(image) {
     width: 100%;
     padding: 0rem 1rem;
 
+    text-align: start;
     background-color: #FFF;
 }
 
@@ -174,4 +176,10 @@ ion-img::part(image) {
 @media (min-width: 768px) {
     
 
+}
+
+@media (min-width: 1280px) {
+    .showcase_container {
+        margin: 1.25rem auto;
+    }
 }
