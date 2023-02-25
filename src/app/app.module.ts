@@ -8,16 +8,6 @@ import { IonicModule } from '@ionic/angular';
 import { SwiperModule } from 'swiper/angular';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
-// Components
-
-import { HomePageComponent } from './pages/homepage/homepage.component';
-import { HeaderComponent } from './components/header/header.component';
-import { BannerComponent } from './components/banner/banner.component';
-import { SearchComponent } from './components/search/search.component';
-import { ShowcaseComponent } from './components/showcase/showcase.component';
-import { DetailpageheaderComponent } from './components/detailpageheader/detailpageheader.component';
-import { ProjectdetailpageComponent } from './pages/projectdetailpage/projectdetailpage.component';
-import { FooterComponent } from './components/footer/footer.component';
 
 // Icons
 
@@ -34,8 +24,20 @@ import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { faBath } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
-import { ProjectdetailsComponent } from './components/projectdetails/projectdetails.component';
+
+// Components
+
+import { HomePageComponent } from './pages/homepage/homepage.component';
+import { HeaderComponent } from './components/header/header.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { SearchComponent } from './components/search/search.component';
+import { ShowcaseComponent } from './components/showcase/showcase.component';
+import { DetailpageheaderComponent } from './components/detailpageheader/detailpageheader.component';
+import { ProjectdetailpageComponent } from './pages/projectdetailpage/projectdetailpage.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ProjectcardsComponent } from './components/projectcards/projectcards.component';
 import { ProjectratingsComponent } from './components/projectratings/projectratings.component';
+import { ProjectdetailsComponent } from './components/projectdetails/projectdetails.component';
 
 @NgModule({
   declarations: [
@@ -48,8 +50,9 @@ import { ProjectratingsComponent } from './components/projectratings/projectrati
     FooterComponent,
     ProjectdetailpageComponent,
     DetailpageheaderComponent,
-    ProjectdetailsComponent,
+    ProjectcardsComponent,
     ProjectratingsComponent,
+    ProjectdetailsComponent,
   ],
   imports: [
     BrowserModule,

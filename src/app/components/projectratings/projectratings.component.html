@@ -1,7 +1,9 @@
-<ion-grid class="bg-[#eee] mx-5 my-7">
-    <ion-row class="max-w-7xl p-5">
-        <ion-row class="text-sm">
-            <ion-text class="w-full mb-3">Ratings</ion-text>
+<ion-grid class="mx-5 my-7 shadow-lg">
+    <ion-row class="max-w-7xl mx-auto p-5 bg-[#eee] rounded-lg divide-y-2 divide-white  lg:divide-x-2 lg:flex-nowrap">
+        <ion-row class="text-sm py-3 lg:px-3 w-full lg:border-2 lg:border-t-white lg:rounded-lg">
+            <ion-text class="w-full mb-3">
+                Ratings
+            </ion-text>
             <ion-row class="flex flex-col font-semibold space-y-2">
                 <ion-text>
                     Sport's & Outdoor
@@ -11,6 +13,43 @@
                 <ion-text>Fittings & Furnishing</ion-text>
                 <ion-text>Specification</ion-text>
             </ion-row>
+        </ion-row>
+        <ion-row class="text-sm py-3 lg:px-3 w-full">
+            <ion-text class="w-full mb-3">
+                Decision Driver
+            </ion-text>
+            <ion-row class="flex flex-col font-semibold space-y-2 w-full">
+                <ion-text class="relative">
+                    Connectivity
+                    <ion-text class="right-0 font-normal absolute">10</ion-text>
+                    <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                </ion-text>
+                <ion-text class="relative">
+                    Livability
+                    <ion-text class="right-0 font-normal absolute">10</ion-text>
+                    <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                </ion-text>
+                <ion-text class="relative">
+                    Lifestyle
+                    <ion-text class="right-0 font-normal absolute">10</ion-text>
+                    <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                </ion-text>
+                <ion-text class="relative">
+                    Value for Money
+                    <ion-text class="right-0 font-normal absolute">10</ion-text>
+                    <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                </ion-text>
+            </ion-row>
+        </ion-row>
+
+        <ion-row class="w-full h-9 pt-3 bg-[#eee]">
+            <ion-content>
+                <ion-slides [options]="listSlideOpt">
+                    <ion-slide *ngFor="let listOption of scrollListText">
+                        <ion-text class="text-sm font-semibold">{{listOption}}</ion-text>
+                    </ion-slide>
+                </ion-slides>
+            </ion-content>
         </ion-row>
     </ion-row>
 </ion-grid>

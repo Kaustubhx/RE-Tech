@@ -24,15 +24,13 @@
     height: 3rem;
 }
 
-/* @layer components {
+@layer components {
 
-    .dropdown {
-        @apply relative inline-block
+    .projectDetailHeading {
+        @apply bg-black p-4 w-full text-white rounded-t-lg
     }
 
-    .dropdown-content {
-        @apply hidden p-2 rounded-lg absolute z-10 bg-gray-700 min-w-[200px] text-sm mt-3 text-white
+    .projectDetailBody {
+        @apply p-4 bg-[#eee] rounded-b-lg
     }
-    
-
-} */
+}

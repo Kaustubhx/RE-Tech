@@ -1,73 +1,35 @@
-<ion-grid class="lg:px-5">
-    <ion-row class="max-w-7xl bg-[#eee] mt-20 mx-auto flex justify-center px-5 lg:rounded-lg">
-        <ion-row class="w-full lg:flex-nowrap lg:my-5 lg:space-x-8">
-            <ion-row class="w-full h-56 md:h-72 my-5 md:w-3/5 md:mx-auto lg:mx-0 lg:h-[22rem] lg:my-0">
-                <ion-content>
-                    <ion-slides>
-                        <ion-slide>
-                            <ion-row class="flex justify-center relative h-56 md:h-72 lg:h-[22rem] w-full">
-                                <ion-img class="absolute h-56 md:h-72 lg:h-[22rem] w-fit xl:w-[44.3rem] lg:object-cover" src="../../../assets/images/projectCoverImg1.jpg"></ion-img>
-                            </ion-row>
-                        </ion-slide>
-                        <ion-slide>
-                            <ion-row class="flex justify-center relative h-56 lg:h-[22rem] w-full">
-                                <ion-img class="absolute h-56 lg:h-[22rem] w-fit xl:w-[44.3rem] lg:object-cover" src="../../../assets/images/projectMasterplan.jpg"></ion-img>
-                            </ion-row>
-                        </ion-slide>
-                    </ion-slides>
-                </ion-content>
+<ion-grid class="mx-5">
+    <ion-row class="max-w-7x space-y-4">
+        <ion-row class="text-sm p-2 w-full rounded-lg border border-slate-300 bg-[#eee]">
+            <ion-text class="font-semibold w-full">Proppy Buddy RERA Reg.</ion-text>
+            <ion-text class="w-full">{{projectData.projects[0].projectOverview[0].propybuddyRegNumber}}</ion-text>
+        </ion-row>
+        <ion-row class="text-sm p-2 w-full rounded-lg border border-slate-300 bg-[#eee]">
+            <ion-text class="font-semibold w-full">Proppy Buddy RERA Reg.</ion-text>
+            <ion-text class="w-full">{{projectData.projects[0].projectOverview[1].projectRegArea}}</ion-text>
+        </ion-row>
+
+        <ion-row class="space-y-5">
+            <ion-row class="w-full">
+                <ion-text class="projectDetailHeading">
+                    {{projectData.projects[0].projectName}} -
+                    Project Info
+                </ion-text>
+                <ion-text class="projectDetailBody">
+                    {{projectData.projects[0].projectOverview[2].projectOverviewPara}}
+                </ion-text>
             </ion-row>
 
-            <ion-row class="flex flex-col mb-5 w-full lg:w-auto">
-                <ion-row class="flex flex-col mb-5">
-                    <ion-text class="text-lg font-semibold">
-                        Lodha Acenza
-                    </ion-text>
-                    <ion-text class="text-sm text-gray-700">
-                        Andheri East, Mumbai
-                    </ion-text>
-                </ion-row>
-                <ion-row class="flex flex-col mb-5 space-y-1">
-                    <ion-text class="text-xl font-semibold">
-                        ₹6.00 Cr to 8.90 Cr
-                    </ion-text>
-                    <ion-text class="text-xs">
-                        Status: <ion-text class="font-semibold">New Launch</ion-text>
-                    </ion-text>
-                </ion-row>
-
-                <ion-row class="flex items-center space-x-5 border border-[#fff] rounded-lg px-5 py-3">
-                    <fa-icon [icon]="['fas', 'building']" class="text-2xl"></fa-icon>
-                    <ion-row class="flex flex-col text-sm text-gray-600">
-                        <ion-text class="">
-                            Project Size
-                        </ion-text>
-                        <ion-text>
-                            132 Unit • 3 Acres
-                        </ion-text>
-                    </ion-row>
-                </ion-row>
-                <ion-row class="flex items-center flex-nowrap space-x-5 border border-[#fff] rounded-lg px-5 py-3">
-                    <fa-icon [icon]="['fas', 'bath']" class="text-2xl"></fa-icon>
-                    <ion-row class="flex flex-col text-sm text-gray-600">
-                        <ion-text>
-                            Configuration: <ion-text> 3,4 BHK Flat from 1480 Sq. Ft. to 2100 Sq. Ft. (Carpet)</ion-text>
-                        </ion-text>
-                    </ion-row>
-                </ion-row>
-
-                <ion-row class="hidden lg:flex justify-between w-full mt-auto">
-                    <ion-row class="px-3 py-2 space-x-3 bg-[#25D366] text-white flex justify-center items-center rounded-lg">
-                        <fa-icon [icon]="['fab', 'whatsapp']" class="text-2xl"></fa-icon>
-                        <ion-text>
-                            Contact on WhatsApp
-                        </ion-text>
-                    </ion-row>
-                    <ion-row class="px-3 py-2 space-x-3 bg-black text-white flex justify-center items-center rounded-lg">
-                        <fa-icon [icon]="['fas', 'phone-alt']"></fa-icon>
-                        <ion-text>
-                            Request a Call Back
-                        </ion-text>
+            <ion-row class="w-full">
+                <ion-text class="projectDetailHeading">
+                    {{projectData.projects[0].projectName}} -
+                    Price List
+                </ion-text>
+                <ion-row class="projectDetailBody">
+                    <ion-row class="grid grid-cols-3">
+                        <ion-text>SomeText1</ion-text>
+                        <ion-text>SomeText1</ion-text>
+                        <ion-text>SomeText1</ion-text>
                     </ion-row>
                 </ion-row>
             </ion-row>

@@ -1,9 +1,8 @@
 ion-slides {
-    background: #eee;
     height: 100%;
     width: 100%;
 }
 
-ion-slide{
-    width: 100%;
+ion-img::part(image) {
+    border-radius: 0.5rem;
 }
