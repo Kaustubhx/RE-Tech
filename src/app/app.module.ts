@@ -24,6 +24,7 @@ import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { faBath } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
+import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
 
 // Components
 
@@ -38,6 +39,23 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProjectcardsComponent } from './components/projectcards/projectcards.component';
 import { ProjectratingsComponent } from './components/projectratings/projectratings.component';
 import { ProjectdetailsComponent } from './components/projectdetails/projectdetails.component';
+import { DetailsformComponent } from './components/detailsform/detailsform.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
+import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
+import { MdbRadioModule } from 'mdb-angular-ui-kit/radio';
+import { MdbRangeModule } from 'mdb-angular-ui-kit/range';
+import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
+import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
+import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
+import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
+import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 
 @NgModule({
   declarations: [
@@ -53,6 +71,8 @@ import { ProjectdetailsComponent } from './components/projectdetails/projectdeta
     ProjectcardsComponent,
     ProjectratingsComponent,
     ProjectdetailsComponent,
+    DetailsformComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -61,6 +81,21 @@ import { ProjectdetailsComponent } from './components/projectdetails/projectdeta
     IonicModule.forRoot(),
     FontAwesomeModule,
     SwiperModule,
+    MdbAccordionModule,
+    MdbCarouselModule,
+    MdbCheckboxModule,
+    MdbCollapseModule,
+    MdbDropdownModule,
+    MdbFormsModule,
+    MdbModalModule,
+    MdbPopoverModule,
+    MdbRadioModule,
+    MdbRangeModule,
+    MdbRippleModule,
+    MdbScrollspyModule,
+    MdbTabsModule,
+    MdbTooltipModule,
+    MdbValidationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -68,6 +103,6 @@ import { ProjectdetailsComponent } from './components/projectdetails/projectdeta
 export class AppModule {
 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faChevronDown, faLocationArrow, faHome, faRupeeSign, faLongArrowAltRight, farHeart, faWhatsapp, faArrowLeft, faMapMarkerAlt, faPhoneAlt, faEllipsisV, faBuilding, faBath);
+    library.addIcons(faChevronDown, faLocationArrow, faHome, faRupeeSign, faLongArrowAltRight, farHeart, faWhatsapp, faArrowLeft, faMapMarkerAlt, faPhoneAlt, faEllipsisV, faBuilding, faBath, faUserCircle);
   }
 }

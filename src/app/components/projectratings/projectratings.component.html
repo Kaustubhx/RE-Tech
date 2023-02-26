@@ -1,6 +1,6 @@
 <ion-grid class="mx-5 my-7 shadow-lg">
-    <ion-row class="max-w-7xl mx-auto p-5 bg-[#eee] rounded-lg divide-y-2 divide-white  lg:divide-x-2 lg:flex-nowrap">
-        <ion-row class="text-sm py-3 lg:px-3 w-full lg:border-2 lg:border-t-white lg:rounded-lg">
+    <ion-row class="max-w-7xl mx-auto p-5 bg-[#eee] rounded-lg divide-y-2 divide-white lg:divide-x-2 flex flex-col flex-nowrap lg:flex-wrap lg:flex-row">
+        <ion-row class="text-sm py-3 lg:px-3 w-full lg:border-2 lg:border-t-white lg:rounded-lg lg:flex-[0_0_50%]">
             <ion-text class="w-full mb-3">
                 Ratings
             </ion-text>
@@ -14,7 +14,7 @@
                 <ion-text>Specification</ion-text>
             </ion-row>
         </ion-row>
-        <ion-row class="text-sm py-3 lg:px-3 w-full">
+        <ion-row class="text-sm py-3 lg:px-3 w-full lg:flex-[0_0_50%]">
             <ion-text class="w-full mb-3">
                 Decision Driver
             </ion-text>
@@ -42,7 +42,7 @@
             </ion-row>
         </ion-row>
 
-        <ion-row class="w-full h-9 pt-3 bg-[#eee]">
+        <ion-row class="w-full h-9 pt-3 bg-[#eee] lg:basis-full">
             <ion-content>
                 <ion-slides [options]="listSlideOpt">
                     <ion-slide *ngFor="let listOption of scrollListText">

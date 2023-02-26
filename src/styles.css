@@ -10,6 +10,12 @@
 @import '~swiper/scss/pagination';
 @import '~swiper/scss/scrollbar';
 @import '~swiper/scss/zoom';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+
+@import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
 
 
 * {
@@ -31,6 +37,10 @@
     }
 
     .projectDetailBody {
-        @apply p-4 bg-[#eee] rounded-b-lg
+        @apply p-4 bg-[#eee] rounded-b-lg w-full
+    }
+
+    .reqDetailInputs {
+        @apply bg-white border border-slate-300 rounded-lg
     }
 }

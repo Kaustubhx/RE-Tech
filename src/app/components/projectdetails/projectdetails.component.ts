@@ -12,10 +12,10 @@ export class ProjectdetailsComponent implements OnInit {
 
   projectData: any;
 
+  projectId: any;
   ngOnInit(): void {
     this.projectData = this.projectsPageData;
     // console.log(this.overviewData.overviewSectionData[0].propybuddyRegNumber)
-    console.log(this.projectData.projects[0])
   }
 
 }

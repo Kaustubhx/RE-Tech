@@ -1,11 +1,11 @@
-<ion-header class="nav ion-no-border">
+<ion-header class="nav ion-no-border" [ngClass]="handleShowNav ? 'nav_white' : 'null'">
     <ion-grid class="nav_contents space-x-3 md:space-x-0">
-        <ion-row class="hamburger-menu" (click)="toggleHamMenu()" [ngClass]="showHamMenu ? 'change' : 'null'">
+        <ion-row class="hamburger-menu" (click)="toggleSidebar()" [ngClass]="showHamMenu ? 'change' : 'null'">
             <ion-row class="hamburger-bar"></ion-row>
             <ion-row class="hamburger-bar"></ion-row>
             <ion-row class="hamburger-bar"></ion-row>
         </ion-row>
-        <ion-row class="logo_container">
+        <ion-row class="logo_container" routerLink="/">
             <ion-text class="web_logo">
                 Logo
             </ion-text>
