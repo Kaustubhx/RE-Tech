@@ -1,44 +1,22 @@
-<ion-header class="nav ion-no-border" [ngClass]="handleShowNav ? 'nav_white' : 'null'">
-    <ion-grid class="nav_contents space-x-3 md:space-x-0">
-        <ion-row class="hamburger-menu" (click)="toggleSidebar()" [ngClass]="showHamMenu ? 'change' : 'null'">
-            <ion-row class="hamburger-bar"></ion-row>
-            <ion-row class="hamburger-bar"></ion-row>
-            <ion-row class="hamburger-bar"></ion-row>
-        </ion-row>
-        <ion-row class="logo_container" routerLink="/">
-            <ion-text class="web_logo">
-                Logo
-            </ion-text>
-        </ion-row>
-
-        <ion-row class="dropdowns_section space-x-5">
-            <ion-row class="userLocation">
+<ion-header class="ion-no-border bg-black">
+    <ion-row class="max-w-7xl lg:mx-auto px-3 justify-center">
+        <ion-row class="flex items-center justify-between flex-nowrap text-sm w-full">
+            <ion-row>
+                <ion-text class="text-lg font-semibold text-white">
+                    Logo
+                </ion-text>
+            </ion-row>
+            <ion-row class="w-2/3">
+                <ion-searchbar class="relative" search-icon="undefined" placeholder="Search By Location Or Pincode">
+                    <fa-icon [icon]="['fas', 'location-arrow']" class="absolute h-4 w-4 z-10 left-3"></fa-icon>
+                </ion-searchbar>
+            </ion-row>
+            <ion-row class="text-white">
                 <ion-text>
                     Thane
-                    <fa-icon icon="chevron-down"></fa-icon>
+                    <fa-icon [icon]="['fas','chevron-down']"></fa-icon>
                 </ion-text>
             </ion-row>
-
-            <ion-row class="project_dropdown">
-                <ion-text>
-                    Projects
-                    <fa-icon icon="chevron-down"></fa-icon>
-                </ion-text>
-            </ion-row>
-
-            <ion-row class="services_dropdown">
-                <ion-text>
-                    More Services
-                    <fa-icon icon="chevron-down"></fa-icon>
-                </ion-text>
-            </ion-row>
-
         </ion-row>
-
-        <ion-row class="!ml-auto">
-            <ion-button class="referalBtn">
-                Login
-            </ion-button>
-        </ion-row>
-    </ion-grid>
+    </ion-row>
 </ion-header>

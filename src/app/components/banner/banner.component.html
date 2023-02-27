@@ -1,16 +1,22 @@
-<ion-grid class="banner_wrapper">
-    <ion-row class="max-w-7xl p-5 mx-auto !pt-56 md:pt-40 space-y-2 flex justify-start">
-        <ion-row class="space-y-2 md:flex-col md:max-w-md">
-            <ion-text class="text-2xl font-semibold text-black md:text-5xl md:font-extrabold">
-                Find Real Estate <br class="hidden md:block"> That Suits You
-            </ion-text>
-            <ion-text class="hidden md:block">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora soluta in ullam iusto, incidunt quae
-                nostrum a commodi.
-            </ion-text>
-        </ion-row>
-
-        <Search class="md:hidden"></Search>
-
+<ion-grid class="">
+    <ion-row class="max-w-7xl lg:mx-auto h-96">
+        <ion-content>
+            <ion-slides [options]="slideOptsOne">
+                <ion-slide *ngFor="let bannerInfo of bannerImageAndLocations">
+                    <ion-row class="h-96 w-full relative" id="{{bannerInfo.id}}">
+                        <ion-img class="object-cover" [src]="bannerInfo.propertyImage"></ion-img>
+                        <ion-row
+                            class="flex flex-col items-start bg-gradient-to-b from-transparent to-black/40 text-white w-full absolute bottom-0 p-4">
+                            <ion-text class="text-sm text-slate-200">#{{bannerInfo.id}} Hot Selling Project</ion-text>
+                            <ion-text class="text-2xl font-medium">{{bannerInfo.propertyName}}</ion-text>
+                            <ion-text class="text-sm font-light">
+                                <fa-icon [icon]="['fas', 'location-arrow']"></fa-icon>
+                                {{bannerInfo.propertyLoction}}
+                            </ion-text>
+                        </ion-row>
+                    </ion-row>
+                </ion-slide>
+            </ion-slides>
+        </ion-content>
     </ion-row>
 </ion-grid>
