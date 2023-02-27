@@ -1,0 +1,100 @@
+<ion-grid>
+    <ion-row class="max-w-7xl lg:mx-auto p-5">
+        <ion-row class="w-full space-y-5">
+            <ion-row class="w-full h-[11.5rem] xs:h-64">
+                <ion-content>
+                    <ion-slides>
+                        <ion-slide>
+                            <ion-row class="h-full w-full flex justify-center relative">
+                                <ion-img class="h-full w-full absolute"
+                                    src="../../../assets/images/projectCoverImg3.jpg"></ion-img>
+                            </ion-row>
+                        </ion-slide>
+                    </ion-slides>
+                </ion-content>
+            </ion-row>
+
+            <ion-row class="space-y-3">
+                <ion-row class="flex flex-col w-full">
+                    <ion-text class="text-lg font-semibold">Lodha Acenza</ion-text>
+                    <ion-text class="text-sm">Andheri East, Mumbai</ion-text>
+                </ion-row>
+                <ion-row class="flex flex-col w-full">
+                    <ion-text>
+                        ₹ 6.00 Cr to 8.90 Cr
+                    </ion-text>
+                    <ion-text>Status: <ion-text>New Launch</ion-text></ion-text>
+                </ion-row>
+                <ion-row class="flex justify-between w-full text-sm">
+                    <ion-text class="p-1 rounded-lg border border-slate-500 bg-black/10">
+                        <fa-icon [icon]="['fas', 'eye']"></fa-icon>
+                        12345 Views
+                    </ion-text>
+                    <ion-text class="p-1 rounded-lg border border-slate-500 bg-black/10">
+                        <fa-icon [icon]="['fas', 'headphones-alt']"></fa-icon>
+                        200 Enquiries
+                    </ion-text>
+                </ion-row>
+
+                <ion-row class="border border-gray-300 rounded-lg">
+                    <ion-row class="flex items-center space-x-5 border border-[#fff] rounded-lg px-5 py-3">
+                        <fa-icon [icon]="['fas', 'building']" class="text-2xl"></fa-icon>
+                        <ion-row class="flex flex-col text-sm text-gray-600">
+                            <ion-text class="">
+                                Project Size
+                            </ion-text>
+                            <ion-text>
+                                132 Unit • 3 Acres
+                            </ion-text>
+                        </ion-row>
+                    </ion-row>
+                    <ion-row class="flex items-center flex-nowrap space-x-5 border-t border-gray-300 px-5 py-3">
+                        <fa-icon [icon]="['fas', 'bath']" class="text-2xl"></fa-icon>
+                        <ion-row class="flex flex-col text-sm text-gray-600">
+                            <ion-text>
+                                Configuration: <ion-text> 3,4 BHK Flat from 1480 Sq. Ft. to 2100 Sq. Ft.
+                                    (Carpet)</ion-text>
+                            </ion-text>
+                        </ion-row>
+                    </ion-row>
+                </ion-row>
+            </ion-row>
+            <ion-row class="text-sm py-3 px-5 lg:px-3 w-full border border-gray-300 rounded-lg">
+                <ion-text class="w-full mb-3">
+                    Decision Driver
+                </ion-text>
+                <ion-row class="flex flex-col font-semibold space-y-2 w-full">
+                    <ion-text class="relative">
+                        Connectivity
+                        <ion-text class="right-0 font-normal absolute">10</ion-text>
+                        <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                    </ion-text>
+                    <ion-text class="relative">
+                        Livability
+                        <ion-text class="right-0 font-normal absolute">10</ion-text>
+                        <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                    </ion-text>
+                    <ion-text class="relative">
+                        Lifestyle
+                        <ion-text class="right-0 font-normal absolute">10</ion-text>
+                        <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                    </ion-text>
+                    <ion-text class="relative">
+                        Value for Money
+                        <ion-text class="right-0 font-normal absolute">10</ion-text>
+                        <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                    </ion-text>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+    </ion-row>
+    <ion-row class="w-full h-9 pt-3 border-t border-gray-300 lg:basis-full drop-shadow-lg">
+        <ion-content>
+            <ion-slides [options]="listSlideOpt">
+                <ion-slide *ngFor="let listOption of scrollListText">
+                    <ion-text class="text-sm font-semibold">{{listOption}}</ion-text>
+                </ion-slide>
+            </ion-slides>
+        </ion-content>
+    </ion-row>
+</ion-grid>

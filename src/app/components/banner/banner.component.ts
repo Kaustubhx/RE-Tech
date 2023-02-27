@@ -9,7 +9,8 @@ export class BannerComponent implements OnInit {
 
   slideOptsOne = {
     autoplay: true,
-    pager: "true"
+    pager: "true",
+    loop: "true",
   }
 
   bannerImageAndLocations = [

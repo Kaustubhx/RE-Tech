@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { projectsDetails } from 'src/app/services/detailPageData.service';
 
 @Component({
-  selector: 'ProjectRatings',
-  templateUrl: './projectratings.component.html',
-  styleUrls: ['./projectratings.component.css']
+  selector: 'ProjectTemplate',
+  templateUrl: './projecttemplate.component.html',
+  styleUrls: ['./projecttemplate.component.css']
 })
-export class ProjectratingsComponent implements OnInit {
+export class ProjecttemplatesComponent implements OnInit {
 
   constructor(private detailData: projectsDetails) { }
 
@@ -17,10 +17,6 @@ export class ProjectratingsComponent implements OnInit {
   }
 
   listSlideOpt = {
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-    },
     slidesPerView: 2,
     // Responsive breakpoints
     breakpoints: {
@@ -41,6 +37,6 @@ export class ProjectratingsComponent implements OnInit {
         slidesPerView: 8
       }
     }
-
   }
+
 }

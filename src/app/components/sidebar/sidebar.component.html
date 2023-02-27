@@ -1,0 +1,21 @@
+<ion-grid class="">
+    <ion-row class="bg-red-500 flex flex-col">
+        <ion-row>
+            <ion-text>Login to your account</ion-text>
+            <ion-text class="border border-black rounded-lg px-6 py-2">
+                <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
+                Login
+            </ion-text>
+        </ion-row>
+        <ion-row>
+            <ion-accordion-group>
+                <ion-accordion>
+                    <ion-text slot="header" class="">
+                        <fa-icon [icon]="['fas', 'home']" class="text-2xl"></fa-icon>
+                        Buy
+                    </ion-text>
+                </ion-accordion>
+            </ion-accordion-group>
+        </ion-row>
+    </ion-row>
+</ion-grid>

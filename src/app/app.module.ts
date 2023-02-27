@@ -23,6 +23,8 @@ import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { faBath } from '@fortawesome/free-solid-svg-icons';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faHeadphonesAlt } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
@@ -38,7 +40,6 @@ import { DetailpageheaderComponent } from './components/detailpageheader/detailp
 import { ProjectdetailpageComponent } from './pages/projectdetailpage/projectdetailpage.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProjecttemplatesComponent } from './components/projecttemplate/projecttemplate.component';
-import { ProjectratingsComponent } from './components/projectratings/projectratings.component';
 import { ProjectdetailsComponent } from './components/projectdetails/projectdetails.component';
 import { DetailsformComponent } from './components/detailsform/detailsform.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -56,7 +57,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     ProjectdetailpageComponent,
     DetailpageheaderComponent,
     ProjecttemplatesComponent,
-    ProjectratingsComponent,
     ProjectdetailsComponent,
     DetailsformComponent,
     SidebarComponent,
@@ -76,6 +76,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 export class AppModule {
 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faChevronDown, faLocationArrow, faHome, faRupeeSign, faLongArrowAltRight, farHeart, faWhatsapp, faArrowLeft, faMapMarkerAlt, faPhoneAlt, faEllipsisV, faBuilding, faBath, faUserCircle);
+    library.addIcons(faChevronDown, faLocationArrow, faHome, faRupeeSign, faLongArrowAltRight, farHeart, faWhatsapp, faArrowLeft, faMapMarkerAlt, faPhoneAlt, faEllipsisV, faBuilding, faBath, faUserCircle, faEye, faHeadphonesAlt);
   }
 }
