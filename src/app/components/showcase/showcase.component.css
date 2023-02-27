@@ -56,18 +56,10 @@
     text-transform: capitalize;
 }
 
-.project_carouselWrapper {
-    height: 26rem;
-}
-
 ion-slides {
     height: 100%;
     width: 100%;
 }
-
-/* ion-slide {
-    width: fit-content !important;
-} */
 
 .projectCard {
     min-width: 18rem;
@@ -148,14 +140,15 @@ ion-img::part(image) {
 }
 
 .WPbtn {
-    --background: #a8a8a8;
+    --background: #25D366;
     --box-shadow: none;
     --padding-start: 0.5rem !important;
     --padding-end: 0.5rem !important;
     --padding-top: 0.5rem !important;
     --padding-bottom: 0.5rem !important;
 
-    color: #000;
+    color: white;
+    border-radius: 0.5rem;
 }
 
 .heartIcon {
@@ -171,6 +164,7 @@ ion-img::part(image) {
     --padding-bottom: 0 !important; */
 
     color: white;
+    border-radius: 0.5rem;
 }
 
 @media (min-width: 768px) {

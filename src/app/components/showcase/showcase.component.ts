@@ -17,10 +17,6 @@ export class ShowcaseComponent implements OnInit {
   }
 
   projectSlideOpt = {
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-    },
     slidesPerView: 1,
     // Responsive breakpoints
     breakpoints: {

@@ -1,10 +1,76 @@
-<ion-grid class="showcase_wrapper">
+<ion-grid>
+    <ion-row class="mt-5 divide-y-2 divide-dashed">
+        <ion-row class="px-3">
+            <ion-text class="projectSection_title">
+                <span class="dashed"></span>
+                New
+            </ion-text>
+            <ion-row class="projectSection_texts">
+                <ion-text class="project_text">
+                    New Real Estate Projects in Thane
+                </ion-text>
+
+                <ion-button class="exploreAllBtn font-medium flex items-center">
+                    Explore All
+                    <fa-icon class="fa-lg ml-2" icon="long-arrow-alt-right"></fa-icon>
+                </ion-button>
+            </ion-row>
+        </ion-row>
+
+        <ion-row class="justify-center">
+            <ion-row *ngFor="let project of demoProjects" class="drop-shadow-lg mx-5 rounded-lg">
+                <ion-row class="projectCard">
+                    <ion-img [src]="project.projectImg" class="projectImage"></ion-img>
+
+                    <ion-row class="projectDetails_container">
+                        <ion-text class="projectName">
+                            {{project.projectName}}
+                        </ion-text>
+                        <ion-text class="projectLocation">
+                            {{project.projectLocation}}
+                        </ion-text>
+
+                        <ion-row class="projectPrice_Stat">
+                            <ion-text class="projectPrice">
+                                ₹{{project.priceTo}} To {{project.priceFrom}}
+                            </ion-text>
+                            <ion-text class="projectStatus text-sm">
+                                {{project.projectStatus}}
+                            </ion-text>
+                        </ion-row>
+
+                        <ion-row class="projectDimensions">
+                            <ion-text class="projectBHK">
+                                {{project.roomVariation}}
+                            </ion-text>
+                            <ion-text class="projectArea">
+                                {{project.roomSize}}
+                            </ion-text>
+                        </ion-row>
+
+                        <ion-row class="projectOhter_btns">
+                            <ion-button class="WPbtn">
+                                <fa-icon class="heartIcon" [icon]="['fab', 'whatsapp']"></fa-icon>
+                                WhatsApp
+                            </ion-button>
+
+                            <ion-button class="detailsBtn" routerLink="/project">Details</ion-button>
+                        </ion-row>
+                    </ion-row>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+    </ion-row>
+</ion-grid>
+
+
+<!-- <ion-grid class="showcase_wrapper">
     <ion-row class="showcase_container">
         <ion-row class="project_section">
             <ion-text class="projectSection_title">
-                <!-- <span class="dashed"></span> -->
-                New
-            </ion-text>
+                    <span class="dashed"></span> 
+                    New
+                </ion-text>
             <ion-row class="projectSection_texts">
                 <ion-text class="project_text">
                     New Real Estate Projects in Thane
@@ -65,4 +131,4 @@
             </ion-content>
         </ion-row>
     </ion-row>
-</ion-grid>
+</ion-grid> -->
