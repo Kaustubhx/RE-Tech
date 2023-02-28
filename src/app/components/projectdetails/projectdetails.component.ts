@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { projectsDetails } from 'src/app/services/detailPageData.service';
 
 @Component({
-  selector: 'ProjectOverview',
+  selector: 'ProjectDetails',
   templateUrl: './projectdetails.component.html',
   styleUrls: ['./projectdetails.component.css']
 })

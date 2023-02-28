@@ -7,16 +7,172 @@
                 </ion-text>
             </ion-row>
             <ion-row class="w-2/3">
-                <ion-searchbar class="relative" search-icon="undefined" placeholder="Search By Location Or Pincode">
+                <ion-searchbar id="open-modal" class="relative" search-icon="undefined"
+                    placeholder="Search By Location Or Pincode">
                     <fa-icon [icon]="['fas', 'location-arrow']" class="absolute h-4 w-4 z-10 left-3"></fa-icon>
                 </ion-searchbar>
             </ion-row>
-            <ion-row class="text-white">
+            <ion-modal trigger="open-modal">
+                <ng-template>
+                    <ion-content [scrollEvents]="true">
+                        <ion-header>
+                            <ion-row class="p-3 justify-between">
+                                <ion-row>
+                                    <fa-icon [icon]="['fas', 'arrow-left']" (click)="back()"></fa-icon>
+                                    <ion-text class="ml-3">
+                                        Thane
+                                        <fa-icon class="text-sm" [icon]="['fas', 'chevron-down']"></fa-icon>
+                                    </ion-text>
+                                </ion-row>
+                                <ion-row>
+                                    <ion-text>
+                                        Reset
+                                    </ion-text>
+                                </ion-row>
+                            </ion-row>
+                        </ion-header>
+                        <ion-grid>
+                            <ion-row class="p-3 space-y-6">
+                                <ion-row class="space-y-3">
+                                    <ion-row class="w-full">
+                                        <ion-searchbar class="relative flex items-center p-0" searchIcon="undefined"
+                                            placeholder="Search By Location, PinCode"></ion-searchbar>
+                                        <fa-icon [icon]="['fas', 'location-arrow']"
+                                            class="absolute h-4 w-4 z-10 left-4 top-[68px]"></fa-icon>
+                                    </ion-row>
+                                    <ion-row class="w-full p-2 bg-[#eee] rounded-lg">
+                                        <ion-text>
+                                            <fa-icon [icon]="['fas', 'crosshairs']"></fa-icon>
+                                            Show Property Sales Near Me
+                                        </ion-text>
+                                    </ion-row>
+                                </ion-row>
+
+                                <ion-row>
+                                    <ion-row>
+                                        <ion-text class="font-medium">
+                                            Unit Type
+                                        </ion-text>
+                                        <ion-row class="p-3 pt-0 space-x-4 space-y-3 text-sm">
+                                            <ion-text class="modalFilterText mt-3">Apartment</ion-text>
+                                            <ion-text class="modalFilterText">Builder Floor</ion-text>
+                                            <ion-text class="modalFilterText">Villa</ion-text>
+                                            <ion-text class="modalFilterText">Independent House</ion-text>
+                                            <ion-text class="modalFilterText">Penthouse</ion-text>
+                                            <ion-text class="modalFilterText">Plot</ion-text>
+                                        </ion-row>
+                                    </ion-row>
+
+                                    <ion-row>
+                                        <ion-text class="font-medium">
+                                            Bedrooms
+                                        </ion-text>
+                                        <ion-row class="p-3 pt-0 space-x-4 space-y-3 text-sm">
+                                            <ion-text class="modalFilterText uppercase mt-3">1 Bhk</ion-text>
+                                            <ion-text class="modalFilterText uppercase">1.5 Bhk Floor</ion-text>
+                                            <ion-text class="modalFilterText uppercase">2 Bhk</ion-text>
+                                            <ion-text class="modalFilterText uppercase">2.5 Bhk House</ion-text>
+                                            <ion-text class="modalFilterText uppercase">3 Bhk</ion-text>
+                                            <ion-text class="modalFilterText uppercase">4 Bhk</ion-text>
+                                            <ion-text class="modalFilterText uppercase">5 Bhk</ion-text>
+                                            <ion-text class="modalFilterText uppercase">6 Bhk</ion-text>
+                                            <ion-text class="modalFilterText uppercase">Studio</ion-text>
+                                        </ion-row>
+                                    </ion-row>
+
+                                    <ion-row class="w-full">
+                                        <ion-text class="font-medium">
+                                            Budget
+                                        </ion-text>
+                                        <ion-row class="w-full">
+                                            <ion-select class="w-1/2" interface="popover"
+                                                placeholder="Min"></ion-select>
+                                            <ion-select class="w-1/2" interface="popover"
+                                                placeholder="Max"></ion-select>
+                                        </ion-row>
+                                    </ion-row>
+
+                                    <ion-row class="w-full">
+                                        <ion-text class="font-medium">
+                                            Furnishing Status
+                                        </ion-text>
+                                        <ion-row class="p-3 pt-0 space-x-4 space-y-3 text-sm">
+                                            <ion-text class="modalFilterText uppercase mt-3">Furnished</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Semi-Furnished</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Unfurnished</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Gated</ion-text>
+                                        </ion-row>
+                                    </ion-row>
+
+                                    <ion-row class="w-full">
+                                        <ion-text class="font-medium">
+                                            Possession Status
+                                        </ion-text>
+                                        <ion-row class="p-3 pt-0 space-x-4 space-y-3 text-sm">
+                                            <ion-text class="modalFilterText uppercase mt-3">Ready to Movie</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Under
+                                                Construction</ion-text>
+                                        </ion-row>
+                                    </ion-row>
+
+                                    <ion-row class="w-full">
+                                        <ion-text class="font-medium">
+                                            Amenities
+                                        </ion-text>
+                                        <ion-row class="p-3 pt-0 space-x-4 space-y-3 text-sm">
+                                            <ion-text class="modalFilterText uppercase mt-3">24 x 7 Security</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Power Backup</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Attached Market</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Gymnasium</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Clubhouse</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Swimming Pool</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Visitor's
+                                                Parking</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Central AC</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Kids Play Area</ion-text>
+                                            <ion-text class="modalFilterText uppercase mt-3">Intercom</ion-text>
+                                        </ion-row>
+                                    </ion-row>
+
+                                    <ion-row class="w-full">
+                                        <ion-text class="font-medium">
+                                            Size
+                                        </ion-text>
+                                        <ion-row class="p-3 pt-0 space-x-4 space-y-3 text-sm">
+                                            <ion-select class="w-1/2" interface="popover"
+                                                placeholder="Min area"></ion-select>
+                                            -
+                                            <ion-select class="w-1/2" interface="popover"
+                                                placeholder="Max area"></ion-select>
+                                        </ion-row>
+                                    </ion-row>
+                                </ion-row>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-content>
+                </ng-template>
+            </ion-modal>
+            <ion-row id="open-modal-location" class="text-white">
                 <ion-text>
                     Thane
                     <fa-icon [icon]="['fas','chevron-down']"></fa-icon>
                 </ion-text>
             </ion-row>
+            <ion-modal trigger="open-modal-location">
+                <ng-template>
+                    <ion-content>
+                        <ion-header>
+                            <ion-row class="p-3">
+                                <ion-row class="space-x-3">
+                                    <fa-icon [icon]="['fas', 'arrow-left']" (click)="back()"></fa-icon>
+                                    <ion-text>Country/City</ion-text>
+                                </ion-row>
+                            </ion-row>
+                        </ion-header>
+                        <LocationModal></LocationModal>
+                    </ion-content>
+                </ng-template>
+            </ion-modal>
         </ion-row>
     </ion-row>
 </ion-header>

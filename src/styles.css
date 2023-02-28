@@ -36,10 +36,18 @@
     }
 
     .projectDetailBody {
-        @apply p-4 bg-[#eee] rounded-b-lg w-full
+        @apply p-4 bg-white border border-gray-300 drop-shadow-lg rounded-b-lg w-full
     }
 
     .reqDetailInputs {
         @apply bg-white border border-slate-300 rounded-lg
+    }
+
+    .projectAmenities {
+        @apply text-sm py-3 px-4 lg:px-3 w-full flex-nowrap
+    }
+
+    .modalFilterText {
+        @apply border rounded-lg px-2 py-1 border-gray-300
     }
 }

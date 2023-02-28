@@ -1,4 +1,9 @@
 import { Component, OnInit, HostListener, Inject, ViewChild, ElementRef } from '@angular/core';
+import { IonModal } from '@ionic/angular';
+import { OverlayEventDetail } from '@ionic/core/components';
+import { filter } from 'rxjs';
+import { filterModalData } from 'src/app/services/filterData.service';
+
 
 @Component({
   selector: 'Header',
@@ -6,38 +11,35 @@ import { Component, OnInit, HostListener, Inject, ViewChild, ElementRef } from '
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @ViewChild(IonModal) modal!: IonModal;
 
-  constructor() { }
+  constructor(private filterData: filterModalData) { }
 
+  filters: any;
+  
   slideOptsOne = {
     autoplay: true
   }
 
-  _opened: boolean = false;
-  _closeOnClickOutside: boolean = false;
-
-  toggleSidebar() {
-    this._opened = !this._opened
+  back() {
+    this.modal.dismiss(null, 'back');
   }
 
-  private _toggleCloseOnClickOutside(): void {
-    this._closeOnClickOutside = !this._closeOnClickOutside;
+  exitLocation() {
+    this.modal.dismiss(null, 'back');
   }
 
-  showProjects = false;
-  toggleProjects(): void {
-    this.showProjects = !this.showProjects
-  }
+  // onWillDismiss(event: Event) {
+  //   const ev = event as CustomEvent<OverlayEventDetail<string>>;
+  //   if (ev.detail.role === 'confirm') {
+  //     this.message = `Hello, ${ev.detail.data}!`;
+  //   }
+  // }
 
-  showServices = false;
-  toggleServices(): void {
-    this.showServices = !this.showServices
-  }
-
-  handleShowNav: any;
 
   ngOnInit(): void {
-
+    this.filters = this.filterData;
+    console.log(this.filters.filterData[0].placeholder)
   }
 }
 

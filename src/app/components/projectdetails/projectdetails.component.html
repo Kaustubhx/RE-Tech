@@ -1,13 +1,13 @@
 <ion-grid class="mx-5">
     <ion-row class="max-w-7xl mx-auto space-y-4 lg:flex-nowrap lg:space-x-5 lg:space-y-0">
-        <ion-row class="lg:w-2/3">
+        <ion-row class="lg:w-2/3 my-5">
             <ion-row class="space-y-5 lg:space-y-0 lg:space-x-5 mb-5">
-                <ion-row class="text-sm p-2 w-full lg:w-auto rounded-lg border border-slate-300 bg-[#eee]">
+                <ion-row class="text-sm p-2 w-full lg:w-auto rounded-lg border border-slate-300 bg-white">
                     <ion-text class="font-semibold w-full">Proppy Buddy RERA Reg.</ion-text>
                     <ion-text
                         class="w-full">{{projectData.projects[0].projectOverview[0].propybuddyRegNumber}}</ion-text>
                 </ion-row>
-                <ion-row class="text-sm p-2 w-full lg:w-auto rounded-lg border border-slate-300 bg-[#eee]">
+                <ion-row class="text-sm p-2 w-full lg:w-auto rounded-lg border border-slate-300 bg-white">
                     <ion-text class="font-semibold w-full">Proppy Buddy RERA Reg.</ion-text>
                     <ion-text class="w-full">{{projectData.projects[0].projectOverview[1].projectRegArea}}</ion-text>
                 </ion-row>
@@ -123,16 +123,18 @@
                     </ion-text>
                 </ion-row>
 
+                <!------ AMENITIES ------>
+
                 <ion-row class="w-full">
                     <ion-text class="projectDetailHeading">
                         {{projectData.projects[0].projectName}} -
                         Amenities
                     </ion-text>
-                    <ion-row class="bg-[#eee]">
-                        <ion-text class="projectDetailBody">
+                    <ion-row class="projectDetailBody">
+                        <ion-text class="">
                             {{projectData.projects[0].projectAmenities[0].amenitiesSummary}}
                         </ion-text>
-                        <ion-row class="text-sm py-3 px-4 lg:px-3 w-full">
+                        <ion-row class="projectAmenities">
                             <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
                                 {{projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[0].amenitieName}}
                             </ion-text>
@@ -144,7 +146,7 @@
                             </ion-row>
                         </ion-row>
 
-                        <ion-row class="text-sm py-3 px-4 lg:px-3 w-full">
+                        <ion-row class="projectAmenities">
                             <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
                                 {{projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[1].amenitieName}}
                             </ion-text>
@@ -156,7 +158,7 @@
                             </ion-row>
                         </ion-row>
 
-                        <ion-row class="text-sm py-3 px-4 lg:px-3 w-full">
+                        <ion-row class="projectAmenities">
                             <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
                                 {{projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[2].amenitieName}}
                             </ion-text>
@@ -168,7 +170,7 @@
                             </ion-row>
                         </ion-row>
 
-                        <ion-row class="text-sm py-3 px-4 lg:px-3 w-full">
+                        <ion-row class="projectAmenities">
                             <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
                                 {{projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[3].amenitieName}}
                             </ion-text>
@@ -180,7 +182,7 @@
                             </ion-row>
                         </ion-row>
 
-                        <ion-row class="text-sm py-3 px-4 lg:px-3 w-full">
+                        <ion-row class="projectAmenities">
                             <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
                                 {{projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[4].amenitieName}}
                             </ion-text>
@@ -199,62 +201,64 @@
                         {{projectData.projects[0].projectName}} -
                         Specification
                     </ion-text>
-                    <ion-text class="projectDetailBody">
-                        {{projectData.projects[0].projectSpecifications[0].specificationSummary}}
-                    </ion-text>
-                    <ion-row class="grid grid-cols-2 gap-y-4 px-4 text-[13.5px] py-4 w-full">
-                        <ion-row class="contents">
-                            <ion-text
-                                class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[0].roomNameAndSide}}</ion-text>
-                            <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[0].roomSpecification}}</ion-text>
-                        </ion-row>
+                    <ion-row class="projectDetailBody">
+                        <ion-text>
+                            {{projectData.projects[0].projectSpecifications[0].specificationSummary}}
+                        </ion-text>
+                        <ion-row class="grid grid-cols-2 gap-y-4 px-4 text-[13.5px] py-4 w-full">
+                            <ion-row class="contents">
+                                <ion-text
+                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[0].roomNameAndSide}}</ion-text>
+                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[0].roomSpecification}}</ion-text>
+                            </ion-row>
 
-                        <ion-row class="contents">
-                            <ion-text
-                                class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[1].roomNameAndSide}}</ion-text>
-                            <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[1].roomSpecification}}</ion-text>
-                        </ion-row>
+                            <ion-row class="contents">
+                                <ion-text
+                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[1].roomNameAndSide}}</ion-text>
+                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[1].roomSpecification}}</ion-text>
+                            </ion-row>
 
-                        <ion-row class="contents">
-                            <ion-text
-                                class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[2].roomNameAndSide}}</ion-text>
-                            <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[2].roomSpecification}}</ion-text>
-                        </ion-row>
+                            <ion-row class="contents">
+                                <ion-text
+                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[2].roomNameAndSide}}</ion-text>
+                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[2].roomSpecification}}</ion-text>
+                            </ion-row>
 
-                        <ion-row class="contents">
-                            <ion-text
-                                class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[3].roomNameAndSide}}</ion-text>
-                            <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[3].roomSpecification}}</ion-text>
-                        </ion-row>
+                            <ion-row class="contents">
+                                <ion-text
+                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[3].roomNameAndSide}}</ion-text>
+                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[3].roomSpecification}}</ion-text>
+                            </ion-row>
 
-                        <ion-row class="contents">
-                            <ion-text
-                                class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[4].roomNameAndSide}}</ion-text>
-                            <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[4].roomSpecification}}</ion-text>
-                        </ion-row>
+                            <ion-row class="contents">
+                                <ion-text
+                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[4].roomNameAndSide}}</ion-text>
+                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[4].roomSpecification}}</ion-text>
+                            </ion-row>
 
-                        <ion-row class="contents">
-                            <ion-text
-                                class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[5].roomNameAndSide}}</ion-text>
-                            <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[5].roomSpecification}}</ion-text>
-                        </ion-row>
+                            <ion-row class="contents">
+                                <ion-text
+                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[5].roomNameAndSide}}</ion-text>
+                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[5].roomSpecification}}</ion-text>
+                            </ion-row>
 
-                        <ion-row class="contents">
-                            <ion-text
-                                class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[6].roomNameAndSide}}</ion-text>
-                            <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[6].roomSpecification}}</ion-text>
-                        </ion-row>
+                            <ion-row class="contents">
+                                <ion-text
+                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[6].roomNameAndSide}}</ion-text>
+                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[6].roomSpecification}}</ion-text>
+                            </ion-row>
 
-                        <ion-row class="contents">
-                            <ion-text
-                                class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[7].roomNameAndSide}}</ion-text>
-                            <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[7].roomSpecification}}</ion-text>
-                        </ion-row>
+                            <ion-row class="contents">
+                                <ion-text
+                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[7].roomNameAndSide}}</ion-text>
+                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[7].roomSpecification}}</ion-text>
+                            </ion-row>
 
-                        <ion-row class="contents">
-                            <ion-text
-                                class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[8].roomNameAndSide}}</ion-text>
-                            <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[8].roomSpecification}}</ion-text>
+                            <ion-row class="contents">
+                                <ion-text
+                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[8].roomNameAndSide}}</ion-text>
+                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[8].roomSpecification}}</ion-text>
+                            </ion-row>
                         </ion-row>
                     </ion-row>
                 </ion-row>
