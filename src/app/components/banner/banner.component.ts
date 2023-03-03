@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomePageDetails } from 'src/app/services/homePageData.service';
 
 @Component({
   selector: 'Banner',
@@ -12,37 +13,12 @@ export class BannerComponent implements OnInit {
     pager: "true",
     loop: "true",
   }
+  constructor(private homePageDetails: HomePageDetails) { }
 
-  bannerImageAndLocations = [
-    {
-      id: '1',
-      propertyImage: '../../../assets/images/bannerImage1.jpg',
-      propertyName: 'Amaze Plaza',
-      propertyLoction: 'Powai, Mumbai',
-    },
-    {
-      id: '2',
-      propertyImage: '../../../assets/images/bannerImage2.jpg',
-      propertyName: 'Queen Tower',
-      propertyLoction: 'Borivali West, Mumbai',
-    },
-    {
-      id: '3',
-      propertyImage: '../../../assets/images/bannerImage3.jpg',
-      propertyName: 'Pride Tower',
-      propertyLoction: 'Mumbai Central, Mumbai',
-    },
-    {
-      id: '4',
-      propertyImage: '../../../assets/images/bannerImage4.jpg',
-      propertyName: 'Prime Heights',
-      propertyLoction: 'Dadar East, Mumbai',
-    },
-  ]
-
-  constructor() { }
-
+  bannerData: any;
   ngOnInit(): void {
+    this.bannerData = this.homePageDetails.homePageData[0].banner_details
+    console.log(this.bannerData)
   }
 
 }

@@ -2,7 +2,7 @@
     <ion-row class="max-w-7xl lg:mx-auto h-96">
         <ion-content>
             <ion-slides [options]="slideOptsOne">
-                <ion-slide *ngFor="let bannerInfo of bannerImageAndLocations">
+                <ion-slide *ngFor="let bannerInfo of bannerData">
                     <ion-row class="h-96 w-full relative" id="{{bannerInfo.id}}">
                         <ion-img class="object-cover" [src]="bannerInfo.propertyImage"></ion-img>
                         <ion-row

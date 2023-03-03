@@ -1,290 +1,372 @@
-<ion-grid class="mx-5">
-    <ion-row class="max-w-7xl mx-auto space-y-4 lg:flex-nowrap lg:space-x-5 lg:space-y-0">
-        <ion-row class="lg:w-2/3 my-5">
-            <ion-row class="space-y-5 lg:space-y-0 lg:space-x-5 mb-5">
-                <ion-row class="text-sm p-2 w-full lg:w-auto rounded-lg border border-slate-300 bg-white">
-                    <ion-text class="font-semibold w-full">Proppy Buddy RERA Reg.</ion-text>
-                    <ion-text
-                        class="w-full">{{projectData.projects[0].projectOverview[0].propybuddyRegNumber}}</ion-text>
-                </ion-row>
-                <ion-row class="text-sm p-2 w-full lg:w-auto rounded-lg border border-slate-300 bg-white">
-                    <ion-text class="font-semibold w-full">Proppy Buddy RERA Reg.</ion-text>
-                    <ion-text class="w-full">{{projectData.projects[0].projectOverview[1].projectRegArea}}</ion-text>
-                </ion-row>
+<ion-grid>
+    <ion-row class="max-w-7xl lg:mx-auto p-3 xs:p-5">
+        <ion-row class="w-full space-y-5">
+            <ion-row class="w-full h-[11.5rem] xs:h-64">
+                <ion-content>
+                    <ion-slides>
+                        <ion-slide *ngFor="let images of projectData.projectImages">
+                            <ion-row class="h-[11.5rem] xs:h-64 w-full flex justify-center relative">
+                                <ion-img class="h-[11.5rem] xs:h-64 w-full absolute object-cover"
+                                    [src]="images.img"></ion-img>
+                            </ion-row>
+                        </ion-slide>
+                    </ion-slides>
+                </ion-content>
             </ion-row>
 
-            <ion-row class="space-y-5">
-                <ion-row class="w-full">
-                    <ion-text class="projectDetailHeading">
-                        {{projectData.projects[0].projectName}} -
-                        Project Info
+            <ion-row class="space-y-3">
+                <ion-row class="flex flex-col w-full">
+                    <ion-text class="text-lg font-semibold">{{projectData.projectName}}</ion-text>
+                    <ion-text class="text-sm">{{projectData.projectLocation}}</ion-text>
+                </ion-row>
+                <ion-row class="flex flex-col w-full">
+                    <ion-text>
+                        ₹ {{projectData.minPrice}} to {{projectData.maxPrice}}
                     </ion-text>
-                    <ion-text class="projectDetailBody">
-                        {{projectData.projects[0].projectOverview[2].projectOverviewPara}}
+                    <ion-text>Status: <ion-text>{{projectData.projectStatus}}</ion-text></ion-text>
+                </ion-row>
+                <ion-row class="flex justify-between w-full text-sm">
+                    <ion-text class="p-1 rounded-lg border border-slate-500 bg-black/10">
+                        <fa-icon [icon]="['fas', 'eye']"></fa-icon>
+                        12345 Views
+                    </ion-text>
+                    <ion-text class="p-1 rounded-lg border border-slate-500 bg-black/10">
+                        <fa-icon [icon]="['fas', 'headphones-alt']"></fa-icon>
+                        200 Enquiries
                     </ion-text>
                 </ion-row>
 
-                <ion-row class="w-full">
-                    <ion-text class="projectDetailHeading">
-                        {{projectData.projects[0].projectName}} -
-                        Price List
-                    </ion-text>
-                    <ion-row class="projectDetailBody">
-                        <ion-row
-                            class="grid grid-cols-3 gap-y-3 lg:gap-y-5 border-2 border-white text-sm text-center w-full">
-                            <ion-text>{{projectData.projects[0].projectPriceList[0].projectUnitTypes[0].projectPriceListTitle}}</ion-text>
-                            <ion-text>{{projectData.projects[0].projectPriceList[0].projectArea[0].projectPriceListTitle}}</ion-text>
-                            <ion-text>{{projectData.projects[0].projectPriceList[0].projectHomePrice[0].projectPriceListTitle}}</ion-text>
-
-                            <ion-row class="contents">
-                                <ion-text>
-                                    {{projectData.projects[0].projectPriceList[0].projectUnitTypes[0].projectUnitType_One[0].projectUnit_BHK}}
-                                    {{projectData.projects[0].projectPriceList[0].projectUnitTypes[0].projectUnitType_One[0].projectUnit_Area}}
-                                    Sq. Ft Apartment
-                                </ion-text>
-                                <ion-text>
-                                    {{projectData.projects[0].projectPriceList[0].projectArea[0].projectAreaType_One[0].projectArea}}
-                                    Sq. Ft
-                                    {{projectData.projects[0].projectPriceList[0].projectArea[0].projectAreaType_One[0].projectAreaMeasureUnit}}
-                                </ion-text>
-                                <ion-text>
-                                    ₹
-                                    {{projectData.projects[0].projectPriceList[0].projectHomePrice[1].projectUnitPricing_One}}
-                                    Cr
-                                </ion-text>
-                            </ion-row>
-
-                            <ion-row class="contents">
-                                <ion-text>
-                                    {{projectData.projects[0].projectPriceList[0].projectUnitTypes[0].projectUnitType_Two[0].projectUnit_BHK}}
-                                    {{projectData.projects[0].projectPriceList[0].projectUnitTypes[0].projectUnitType_Two[0].projectUnit_Area}}
-                                    Sq. Ft Apartment
-                                </ion-text>
-                                <ion-text>
-                                    {{projectData.projects[0].projectPriceList[0].projectArea[0].projectAreaType_Two[0].projectArea}}
-                                    Sq. Ft
-                                    {{projectData.projects[0].projectPriceList[0].projectArea[0].projectAreaType_Two[0].projectAreaMeasureUnit}}
-                                </ion-text>
-                                <ion-text>
-                                    ₹
-                                    {{projectData.projects[0].projectPriceList[0].projectHomePrice[1].projectUnitPricing_Two}}
-                                    Cr
-                                </ion-text>
-                            </ion-row>
-
-                            <ion-row class="contents">
-                                <ion-text>
-                                    {{projectData.projects[0].projectPriceList[0].projectUnitTypes[0].projectUnitType_Three[0].projectUnit_BHK}}
-                                    {{projectData.projects[0].projectPriceList[0].projectUnitTypes[0].projectUnitType_Three[0].projectUnit_Area}}
-                                    Sq. Ft Apartment
-                                </ion-text>
-                                <ion-text>
-                                    {{projectData.projects[0].projectPriceList[0].projectArea[0].projectAreaType_Three[0].projectArea}}
-                                    Sq. Ft
-                                    {{projectData.projects[0].projectPriceList[0].projectArea[0].projectAreaType_Three[0].projectAreaMeasureUnit}}
-                                </ion-text>
-                                <ion-text>
-                                    ₹
-                                    {{projectData.projects[0].projectPriceList[0].projectHomePrice[1].projectUnitPricing_Three}}
-                                    Cr
-                                </ion-text>
-                            </ion-row>
+                <ion-row class="border border-gray-300 rounded-lg">
+                    <ion-row class="flex items-center space-x-5 border border-[#fff] rounded-lg px-5 py-3">
+                        <fa-icon [icon]="['fas', 'building']" class="text-2xl"></fa-icon>
+                        <ion-row class="flex flex-col text-sm text-gray-600">
+                            <ion-text class="">
+                                Project Size
+                            </ion-text>
+                            <ion-text>
+                                {{projectData.projectUnits}} • {{projectData.projectArea}}
+                            </ion-text>
                         </ion-row>
                     </ion-row>
-                </ion-row>
-
-                <ion-row class="w-full">
-                    <ion-text class="projectDetailHeading">
-                        {{projectData.projects[0].projectName}} -
-                        Floor Plans
-                    </ion-text>
-                    <ion-text class="projectDetailBody">
-                        {{projectData.projects[0].projectFloorPlans[0].floorPlanDescription}}
-                    </ion-text>
-                </ion-row>
-
-                <ion-row class="w-full">
-                    <ion-text class="projectDetailHeading">
-                        {{projectData.projects[0].projectName}} -
-                        Broucher
-                    </ion-text>
-                    <ion-text class="projectDetailBody">
-                        <!-- {{projectData.projects[0].projectFloorPlans[0].floorPlanDescription}} -->
-                    </ion-text>
-                </ion-row>
-
-                <ion-row class="w-full">
-                    <ion-text class="projectDetailHeading">
-                        {{projectData.projects[0].projectName}} -
-                        Video
-                    </ion-text>
-                    <ion-text class="projectDetailBody">
-                        <!-- {{projectData.projects[0].projectFloorPlans[0].floorPlanDescription}} -->
-                    </ion-text>
-                </ion-row>
-
-                <!------ AMENITIES ------>
-
-                <ion-row class="w-full">
-                    <ion-text class="projectDetailHeading">
-                        {{projectData.projects[0].projectName}} -
-                        Amenities
-                    </ion-text>
-                    <ion-row class="projectDetailBody">
-                        <ion-text class="">
-                            {{projectData.projects[0].projectAmenities[0].amenitiesSummary}}
-                        </ion-text>
-                        <ion-row class="projectAmenities">
-                            <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
-                                {{projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[0].amenitieName}}
-                            </ion-text>
-                            <ion-row class="flex flex-col space-y-2 lg:max-h-[10rem] lg:min-w-[20rem]">
-                                <ion-text
-                                    *ngFor="let sports of projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[0].amenitieList">
-                                    {{sports}}
+                    <ion-row class="flex items-center flex-nowrap space-x-5 border-t border-gray-300 px-5 py-3">
+                        <fa-icon [icon]="['fas', 'bath']" class="text-2xl"></fa-icon>
+                        <ion-row class="flex flex-col text-sm text-gray-600">
+                            <ion-text>
+                                Configuration: <ion-text> {{projectData.projectFlatBHK}} Flat from
+                                    {{projectData.porjectFlatArea_Lowest}} to
+                                    {{projectData.porjectFlatArea_Heighest}}
+                                    {{projectData.projctFlatAreaMeasureUnit}}
                                 </ion-text>
-                            </ion-row>
-                        </ion-row>
-
-                        <ion-row class="projectAmenities">
-                            <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
-                                {{projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[1].amenitieName}}
                             </ion-text>
-                            <ion-row class="flex flex-col space-y-2 lg:max-h-[10rem] lg:min-w-[20rem]">
-                                <ion-text
-                                    *ngFor="let sports of projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[1].amenitieList">
-                                    {{sports}}
-                                </ion-text>
-                            </ion-row>
-                        </ion-row>
-
-                        <ion-row class="projectAmenities">
-                            <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
-                                {{projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[2].amenitieName}}
-                            </ion-text>
-                            <ion-row class="flex flex-col space-y-2 lg:max-h-[10rem] lg:min-w-[20rem]">
-                                <ion-text
-                                    *ngFor="let sports of projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[2].amenitieList">
-                                    {{sports}}
-                                </ion-text>
-                            </ion-row>
-                        </ion-row>
-
-                        <ion-row class="projectAmenities">
-                            <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
-                                {{projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[3].amenitieName}}
-                            </ion-text>
-                            <ion-row class="flex flex-col space-y-2 lg:max-h-[10rem] max-w lg:min-w-[20rem]">
-                                <ion-text
-                                    *ngFor="let sports of projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[3].amenitieList">
-                                    {{sports}}
-                                </ion-text>
-                            </ion-row>
-                        </ion-row>
-
-                        <ion-row class="projectAmenities">
-                            <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
-                                {{projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[4].amenitieName}}
-                            </ion-text>
-                            <ion-row class="flex flex-col space-y-2 lg:max-h-[10rem] lg:min-w-[20rem]">
-                                <ion-text
-                                    *ngFor="let sports of projectData.projects[0].projectAmenities[1].amenitieNameAndTypes[4].amenitieList">
-                                    {{sports}}
-                                </ion-text>
-                            </ion-row>
-                        </ion-row>
-                    </ion-row>
-                </ion-row>
-
-                <ion-row class="w-full bg-[#eee] divide-y-2 divide-white">
-                    <ion-text class="projectDetailHeading">
-                        {{projectData.projects[0].projectName}} -
-                        Specification
-                    </ion-text>
-                    <ion-row class="projectDetailBody">
-                        <ion-text>
-                            {{projectData.projects[0].projectSpecifications[0].specificationSummary}}
-                        </ion-text>
-                        <ion-row class="grid grid-cols-2 gap-y-4 px-4 text-[13.5px] py-4 w-full">
-                            <ion-row class="contents">
-                                <ion-text
-                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[0].roomNameAndSide}}</ion-text>
-                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[0].roomSpecification}}</ion-text>
-                            </ion-row>
-
-                            <ion-row class="contents">
-                                <ion-text
-                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[1].roomNameAndSide}}</ion-text>
-                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[1].roomSpecification}}</ion-text>
-                            </ion-row>
-
-                            <ion-row class="contents">
-                                <ion-text
-                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[2].roomNameAndSide}}</ion-text>
-                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[2].roomSpecification}}</ion-text>
-                            </ion-row>
-
-                            <ion-row class="contents">
-                                <ion-text
-                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[3].roomNameAndSide}}</ion-text>
-                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[3].roomSpecification}}</ion-text>
-                            </ion-row>
-
-                            <ion-row class="contents">
-                                <ion-text
-                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[4].roomNameAndSide}}</ion-text>
-                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[4].roomSpecification}}</ion-text>
-                            </ion-row>
-
-                            <ion-row class="contents">
-                                <ion-text
-                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[5].roomNameAndSide}}</ion-text>
-                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[5].roomSpecification}}</ion-text>
-                            </ion-row>
-
-                            <ion-row class="contents">
-                                <ion-text
-                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[6].roomNameAndSide}}</ion-text>
-                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[6].roomSpecification}}</ion-text>
-                            </ion-row>
-
-                            <ion-row class="contents">
-                                <ion-text
-                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[7].roomNameAndSide}}</ion-text>
-                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[7].roomSpecification}}</ion-text>
-                            </ion-row>
-
-                            <ion-row class="contents">
-                                <ion-text
-                                    class="font-semibold max-w-[8rem]">{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[8].roomNameAndSide}}</ion-text>
-                                <ion-text>{{projectData.projects[0].projectSpecifications[1].roomNamesAndSpecification[8].roomSpecification}}</ion-text>
-                            </ion-row>
                         </ion-row>
                     </ion-row>
                 </ion-row>
             </ion-row>
-
+            <ion-row id="" class="text-sm py-3 px-5 lg:px-3 w-full border border-gray-300 rounded-lg">
+                <ion-text class="w-full mb-3">
+                    Decision Driver
+                </ion-text>
+                <ion-row class="flex flex-col font-semibold space-y-2 w-full">
+                    <ion-text class="relative">
+                        Connectivity
+                        <ion-text class="right-0 font-normal absolute">10</ion-text>
+                        <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                    </ion-text>
+                    <ion-text class="relative">
+                        Livability
+                        <ion-text class="right-0 font-normal absolute">10</ion-text>
+                        <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                    </ion-text>
+                    <ion-text class="relative">
+                        Lifestyle
+                        <ion-text class="right-0 font-normal absolute">10</ion-text>
+                        <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                    </ion-text>
+                    <ion-text class="relative">
+                        Value for Money
+                        <ion-text class="right-0 font-normal absolute">10</ion-text>
+                        <span class="block h-2 w-full bg-green-500 rounded-full"></span>
+                    </ion-text>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+        <ion-row class="w-full h-9 pt-1 border-t border-gray-300 lg:basis-full drop-shadow-lg">
+            <ion-slides [options]="listSlideOpt">
+                <ion-slide *ngFor="let listOption of scrollListText" (click)="scrollTo(listOption.name)">
+                    <ion-text [id]="listOption.name" class="text-sm font-semibold">{{listOption.label}}</ion-text>
+                </ion-slide>
+            </ion-slides>
         </ion-row>
 
-        <ion-row class="sticky top-12 h-fit">
-            <DetailsForm></DetailsForm>
-        </ion-row>
-
-        <!-- <ion-row id="floatingForm" class="hidden lg:flex sticky top-12 h-fit">
-            <ion-row class="bg-[#eee] py-2 px-5 flex-col rounded-lg">
-                <ion-row class="items-center space-x-3">
-                    <fa-icon [icon]="['fas', 'phone-alt']"
-                        class="flex items-center justify-center border-2 rounded-full border-black h-7 w-7"></fa-icon>
-                    <ion-text class="font-semibold">Contact our Real Estate Experts</ion-text>
+        <ion-row class="space-y-4">
+            <ion-row class="my-5">
+                <ion-row class="space-y-5 lg:space-y-0 lg:space-x-5 mb-5">
+                    <ion-row class="text-sm p-2 w-full lg:w-auto rounded-lg border border-slate-300 bg-white">
+                        <ion-text class="font-semibold w-full">Proppy Buddy RERA Reg.</ion-text>
+                        <ion-text class="w-full">{{projectData.projectOverview[0].propybuddyRegNumber}}</ion-text>
+                    </ion-row>
+                    <ion-row class="text-sm p-2 w-full lg:w-auto rounded-lg border border-slate-300 bg-white">
+                        <ion-text class="font-semibold w-full">Proppy Buddy RERA Reg.</ion-text>
+                        <ion-text class="w-full">{{projectData.projectOverview[1].projectRegArea}}</ion-text>
+                    </ion-row>
                 </ion-row>
-                <ion-row class="p-4 my-2 shadow-lg border-2 border-white rounded-lg flex-col space-y-3">
-                    <ion-input placeholder="Name" class="reqDetailInputs"></ion-input>
-                    <ion-input placeholder="Phone Number" class="reqDetailInputs"></ion-input>
-                    <ion-button class="reqDetailBtn">
-                        Request Details
-                    </ion-button>
+
+                <ion-row class="space-y-5">
+
+                    <ion-row class="w-full text-white">
+                        <ion-row class="bg-black p-3 w-full rounded-t-lg">
+                            Lodha Acencza - Random
+                        </ion-row>
+                        <ion-row>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos maiores odio
+                            exercitationem
+                            facere, aut commodi eius ipsam veritatis quam nesciunt!
+                        </ion-row>
+                    </ion-row>
+
+                    <ion-row [id]="scrollListText[0].name" class="w-full">
+                        <ion-text class="projectDetailHeading">
+                            {{projectData.projectName}} -
+                            Project Info
+                        </ion-text>
+                        <ion-text class="projectDetailBody">
+                            {{projectData.projectOverview[2].projectOverviewPara}}
+                        </ion-text>
+                    </ion-row>
+
+                    <ion-row [id]="scrollListText[1].name" class="w-full">
+                        <ion-text class="projectDetailHeading">
+                            {{projectData.projectName}} -
+                            {{projectData.projectPriceList[0].label}}
+                        </ion-text>
+                        <ion-row class="projectDetailBody">
+                            <ion-row
+                                class="grid grid-cols-3 gap-y-3 lg:gap-y-5 border-2 border-white text-sm text-center w-full">
+                                <ion-text>{{projectData.projectPriceList[1].tableLabel}}</ion-text>
+                                <ion-text>{{projectData.projectPriceList[2].tableLabel}}</ion-text>
+                                <ion-text>{{projectData.projectPriceList[3].tableLabel}}</ion-text>
+
+                                <ion-row class="contents">
+                                    <ion-text>
+                                        {{projectData.projectPriceList[1].unitTypeBHK_one}}
+                                        {{projectData.projectPriceList[2].unitTypeArea_one}}
+                                    </ion-text>
+                                    <ion-text>
+                                        {{projectData.projectPriceList[2].unitTypeArea_one}}
+                                    </ion-text>
+                                    <ion-text>
+                                        ₹
+                                        {{projectData.projectPriceList[3].unitTypePrice_one}}
+                                    </ion-text>
+                                </ion-row>
+
+                                <ion-row class="contents">
+                                    <ion-text>
+                                        {{projectData.projectPriceList[1].unitTypeBHK_two}}
+                                        {{projectData.projectPriceList[2].unitTypeArea_two}}
+                                    </ion-text>
+                                    <ion-text>
+                                        {{projectData.projectPriceList[2].unitTypeArea_two}}
+                                    </ion-text>
+                                    <ion-text>
+                                        ₹
+                                        {{projectData.projectPriceList[3].unitTypePrice_two}}
+                                    </ion-text>
+                                </ion-row>
+
+                                <ion-row class="contents">
+                                    <ion-text>
+                                        {{projectData.projectPriceList[1].unitTypeBHK_three}}
+                                        {{projectData.projectPriceList[2].unitTypeArea_three}}
+                                    </ion-text>
+                                    <ion-text>
+                                        {{projectData.projectPriceList[2].unitTypeArea_three}}
+                                    </ion-text>
+                                    <ion-text>
+                                        ₹
+                                        {{projectData.projectPriceList[3].unitTypePrice_three}}
+                                    </ion-text>
+                                </ion-row>
+                            </ion-row>
+                        </ion-row>
+                    </ion-row>
+
+                    <ion-row [id]="scrollListText[2].name" class="w-full">
+                        <ion-text class="projectDetailHeading">
+                            {{projectData.projectName}} -
+                            Floor Plans
+                        </ion-text>
+                        <ion-text class="projectDetailBody">
+                            {{projectData.projectFloorPlans[0].floorPlanDescription}}
+                        </ion-text>
+                    </ion-row>
+
+                    <ion-row [id]="scrollListText[3].name" class="w-full">
+                        <ion-text class="projectDetailHeading">
+                            {{projectData.projectName}} -
+                            Broucher
+                        </ion-text>
+                        <ion-text class="projectDetailBody">
+                            <!-- {{projectData.projectFloorPlans[0].floorPlanDescription}} -->
+                        </ion-text>
+                    </ion-row>
+
+                    <ion-row [id]="scrollListText[4].name" class="w-full">
+                        <ion-text class="projectDetailHeading">
+                            {{projectData.projectName}} -
+                            Video
+                        </ion-text>
+                        <ion-text class="projectDetailBody">
+                            <!-- {{projectData.projectFloorPlans[0].floorPlanDescription}} -->
+                        </ion-text>
+                    </ion-row>
+
+                    <!------ AMENITIES ------>
+
+                    <ion-row [id]="scrollListText[5].name" class="w-full">
+                        <ion-text class="projectDetailHeading">
+                            {{projectData.projectName}} -
+                            Amenities
+                        </ion-text>
+                        <ion-row class="projectDetailBody">
+                            <ion-text class="">
+                                {{projectData.projectAmenities[0].amenitiesSummary}}
+                            </ion-text>
+                            <ion-row class="projectAmenities">
+                                <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
+                                    {{projectData.projectAmenities[1].amenitieName}}
+                                </ion-text>
+                                <ion-row class="flex flex-col space-y-2 lg:max-h-[10rem] lg:min-w-[20rem]">
+                                    <ion-text>
+                                        {{projectData.projectAmenities[1].amenitieList}}
+                                    </ion-text>
+                                </ion-row>
+                            </ion-row>
+
+                            <ion-row class="projectAmenities">
+                                <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
+                                    {{projectData.projectAmenities[2].amenitieName}}
+                                </ion-text>
+                                <ion-row class="flex flex-col space-y-2 lg:max-h-[10rem] lg:min-w-[20rem]">
+                                    <ion-text>
+                                        {{projectData.projectAmenities[2].amenitieList}}
+                                    </ion-text>
+                                </ion-row>
+                            </ion-row>
+
+                            <ion-row class="projectAmenities">
+                                <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
+                                    {{projectData.projectAmenities[3].amenitieName}}
+                                </ion-text>
+                                <ion-row class="flex flex-col space-y-2 lg:max-h-[10rem] lg:min-w-[20rem]">
+                                    <ion-text>
+                                        {{projectData.projectAmenities[3].amenitieList}}
+                                    </ion-text>
+                                </ion-row>
+                            </ion-row>
+
+                            <ion-row class="projectAmenities">
+                                <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
+                                    {{projectData.projectAmenities[4].amenitieName}}
+                                </ion-text>
+                                <ion-row class="flex flex-col space-y-2 lg:max-h-[10rem] max-w lg:min-w-[20rem]">
+                                    <ion-text>
+                                        {{projectData.projectAmenities[4].amenitieList}}
+                                    </ion-text>
+                                </ion-row>
+                            </ion-row>
+
+                            <ion-row class="projectAmenities">
+                                <ion-text class="font-semibold min-w-[8rem] lg:min-w-[15rem]">
+                                    {{projectData.projectAmenities[5].amenitieName}}
+                                </ion-text>
+                                <ion-row class="flex flex-col space-y-2 lg:max-h-[10rem] lg:min-w-[20rem]">
+                                    <ion-text>
+                                        {{projectData.projectAmenities[5].amenitieList}}
+                                    </ion-text>
+                                </ion-row>
+                            </ion-row>
+                        </ion-row>
+                    </ion-row>
+
+                    <ion-row [id]="scrollListText[6].name" class="w-full bg-[#eee] divide-y-2 divide-white">
+                        <ion-text class="projectDetailHeading">
+                            {{projectData.projectName}} -
+                            Specification
+                        </ion-text>
+                        <ion-row class="projectDetailBody">
+                            <ion-text>
+                                {{projectData.projectSpecifications[0].specificationSummary}}
+                            </ion-text>
+                            <ion-row class="grid grid-cols-2 gap-y-4 text-[13.5px] py-4 w-full">
+                                <ion-row class="contents">
+                                    <ion-text
+                                        class="font-semibold max-w-[8rem]">{{projectData.projectSpecifications[1].roomNameAndSide}}</ion-text>
+                                    <ion-text>{{projectData.projectSpecifications[1].roomSpecification}}</ion-text>
+                                </ion-row>
+
+                                <ion-row class="contents">
+                                    <ion-text
+                                        class="font-semibold max-w-[8rem]">{{projectData.projectSpecifications[1].roomNameAndSide}}</ion-text>
+                                    <ion-text>{{projectData.projectSpecifications[1].roomSpecification}}</ion-text>
+                                </ion-row>
+
+                                <ion-row class="contents">
+                                    <ion-text
+                                        class="font-semibold max-w-[8rem]">{{projectData.projectSpecifications[1].roomNameAndSide}}</ion-text>
+                                    <ion-text>{{projectData.projectSpecifications[1].roomSpecification}}</ion-text>
+                                </ion-row>
+
+                                <ion-row class="contents">
+                                    <ion-text
+                                        class="font-semibold max-w-[8rem]">{{projectData.projectSpecifications[1].roomNameAndSide}}</ion-text>
+                                    <ion-text>{{projectData.projectSpecifications[1].roomSpecification}}</ion-text>
+                                </ion-row>
+
+                                <ion-row class="contents">
+                                    <ion-text class="font-semibold max-w-[8rem]">
+                                        {{projectData.projectSpecifications[1].roomNameAndSide}}
+                                    </ion-text>
+                                    <ion-text>{{projectData.projectSpecifications[1].roomSpecification}}</ion-text>
+                                </ion-row>
+
+                                <ion-row class="contents">
+                                    <ion-text
+                                        class="font-semibold max-w-[8rem]">{{projectData.projectSpecifications[1].roomNameAndSide}}</ion-text>
+                                    <ion-text>{{projectData.projectSpecifications[1].roomSpecification}}</ion-text>
+                                </ion-row>
+
+                                <ion-row class="contents">
+                                    <ion-text
+                                        class="font-semibold max-w-[8rem]">{{projectData.projectSpecifications[1].roomNameAndSide}}</ion-text>
+                                    <ion-text>{{projectData.projectSpecifications[1].roomSpecification}}</ion-text>
+                                </ion-row>
+
+                                <ion-row class="contents">
+                                    <ion-text
+                                        class="font-semibold max-w-[8rem]">{{projectData.projectSpecifications[1].roomNameAndSide}}</ion-text>
+                                    <ion-text>{{projectData.projectSpecifications[1].roomSpecification}}</ion-text>
+                                </ion-row>
+
+                                <ion-row class="contents">
+                                    <ion-text
+                                        class="font-semibold max-w-[8rem]">{{projectData.projectSpecifications[1].roomNameAndSide}}</ion-text>
+                                    <ion-text>{{projectData.projectSpecifications[1].roomSpecification}}</ion-text>
+                                </ion-row>
+                            </ion-row>
+                        </ion-row>
+                    </ion-row>
                 </ion-row>
             </ion-row>
-        </ion-row> -->
+
+            <ion-row class="sticky top-12 h-fit">
+                <DetailsForm></DetailsForm>
+            </ion-row>
+        </ion-row>
     </ion-row>
 </ion-grid>
+
+
+<!-- <ion-grid class="mx-5">
+    
+</ion-grid> -->

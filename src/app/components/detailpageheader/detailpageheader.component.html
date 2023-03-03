@@ -1,29 +1,52 @@
 <ion-header class="sticky top-0 bg-white z-10">
-    <ion-grid class="flex items-center px-5 py-2 justify-between">
+    <ion-grid class="flex items-center px-3 xs:px-5 py-2 justify-between">
         <ion-row class="flex items-center flex-nowrap space-x-3">
-            <fa-icon 
-                class="bg-[#eee] rounded-full text-lg w-7 h-7 flex items-center justify-center"
-                icon="arrow-left"
-                routerLink="/"
-                >
+            <fa-icon class="bg-[#eee] rounded-full text-xl w-7 h-7 flex items-center justify-center" icon="arrow-left"
+                routerLink="/">
             </fa-icon>
             <ion-row class="flex flex-col items-center justify-center">
                 <ion-text class="font-semibold w-full block">
-                    Lodha Acenza
+                    {{projectData.projectName}}
                 </ion-text>
                 <ion-text class="text-xs w-full block">
                     <fa-icon [icon]="['fas', 'map-marker-alt']"></fa-icon>
-                    Andheri East, Mumbai
+                    {{projectData.projectLocation}}
                 </ion-text>
             </ion-row>
         </ion-row>
 
         <ion-row class="flex items-center justify-center text-lg space-x-3">
             <fa-icon class="bg-[#eee] h-9 w-9 rounded-full flex items-center justify-center"
-                [icon]="['fas', 'phone-alt']"></fa-icon>
-        <fa-icon class="text-[26px] h-9 w-9 bg-[#25D366] text-white rounded-full flex items-center justify-center"
-                [icon]="['fab', 'whatsapp']"></fa-icon>
-            <fa-icon class="" [icon]="['fas', 'ellipsis-v']"></fa-icon>
+                [icon]="['fas', 'phone-alt']" (click)="presentContactModal()"></fa-icon>
+            <fa-icon class="text-[26px] h-9 w-9 bg-[#25D366] text-white rounded-full flex items-center justify-center"
+                [icon]="['fab', 'whatsapp']" (click)="presentWhatsAppModal()">
+            </fa-icon>
+            <ion-row>
+                <fa-icon class="relative" [icon]="['fas', 'ellipsis-v']" (click)="presentLinks()"></fa-icon>
+                <ion-row class="absolute hidden right-0 flex-col text-sm bg-white rounded-xl p-3 drop-shadow-xl top-14 space-y-1"
+                    [ngClass]="{'!flex': dotClicked == true}">
+                    <ion-text>
+                        <fa-icon class="mr-2" [icon]="['fab', 'whatsapp']"></fa-icon>
+                        WhatsApp
+                    </ion-text>
+                    <ion-text>
+                        <fa-icon class="mr-2" [icon]="['fab', 'twitter']"></fa-icon>
+                        Twitter
+                    </ion-text>
+                    <ion-text>
+                        <fa-icon class="mr-2" [icon]="['fab', 'instagram']"></fa-icon>
+                        Instagram
+                    </ion-text>
+                    <ion-text>
+                        <fa-icon class="mr-2" [icon]="['fab', 'linkedin']"></fa-icon>
+                        Linked IN
+                    </ion-text>
+                    <ion-text>
+                        <fa-icon class="mr-2" [icon]="['fab', 'facebook']"></fa-icon>
+                        Facebook
+                    </ion-text>
+                </ion-row>
+            </ion-row>
         </ion-row>
     </ion-grid>
 </ion-header>

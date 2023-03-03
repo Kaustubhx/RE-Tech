@@ -86,7 +86,7 @@ ion-img::part(image) {
 .projectDetails_container {
     display: flex;
     width: 100%;
-    padding: 0rem 1rem;
+    margin: 0rem 1rem;
 
     text-align: start;
     background-color: #FFF;
@@ -167,10 +167,6 @@ ion-img::part(image) {
     border-radius: 0.5rem;
 }
 
-@media (min-width: 768px) {
-    
-
-}
 
 @media (min-width: 1280px) {
     .showcase_container {

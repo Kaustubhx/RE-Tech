@@ -5,35 +5,83 @@ import { Injectable } from '@angular/core';
 })
 export class projectsDetails {
 
-    scrollListOptions = ['Overview', 'Price List', 'Floor Plan', 'Broucher', 'Video', 'Amenities', 'Specification', 'Commute Time', 'Location & Landmark', 'About Builder']
+    scrollListOptions = [
+        {
+            name: 'overview',
+            label: 'Overview'
+        },
+        {
+            name: 'price_list',
+            label: 'Price List',
+        },
+        {
+            name: 'floor_plan',
+            label: 'Floor Plan',
+        },
+        {
+            name: 'broucher',
+            label: 'Broucher',
+        },
+        {
+            name: 'video',
+            label: 'Video',
+        },
+        {
+            name: 'amenities',
+            label: 'Amenities',
+        },
+        {
+            name: 'specification',
+            label: 'Specification',
+        },
+        {
+            name: 'commute_time',
+            label: 'Commute Time',
+        },
+        {
+            name: 'location_landmark',
+            label: 'Location & Landmark',
+        },
+        {
+            name: 'about_builder',
+            label: 'About Builder',
+        },
+    ]
 
-    projects: Array<Object> = [
+    projects = [
         {
             id: '1',
             projectName: 'Amaze Tower',
             projectLocation: 'Andheri East, Mumbai',
             projectPinCode: '400051',
-            projectPrice: [
+            projectImages: [
                 {
-                    projectPrice_Lowest: '6.80 Cr',
-                    projectPrice_Height: '8.30 Cr'
-                }
+                    name: 'cover_image',
+                    img: '../../../assets/images/propyDemo2.jpg',
+                },
+                {
+                    name: 'master_image',
+                    img: '../../../assets/images/propyDemo1.jpg',
+                },
+                {
+                    name: 'floorPlans_image',
+                    img: '../../../assets/images/propyDemo3.jpg',
+                },
+                {
+                    name: 'property_video',
+                    img: '../../../assets/images/propyDemo4.jpg',
+                },
             ],
+            minPrice: '6.80 Cr',
+            maxPrice: '8.30 Cr',
             projectStaus: 'Ready To Move',
-            projectSize: [
-                {
-                    projectUnits: '132',
-                    projectArea: '3Acres',
-                }
-            ],
-            projectRoomConfig: [
-                {
-                    projectFlatBHK: '3,4',
-                    porjectFlatArea_Lowest: '1480',
-                    porjectFlatArea_Heighest: '2100',
-                    projctFlatAreaMeasureUnit: 'Carpet'
-                }
-            ],
+            projectUnits: '132 Unit',
+            projectArea: '3 Acres',
+            projectFlatBHK: '3,4 BHK',
+            porjectFlatArea_Lowest: '1480 Sq. Ft.',
+            porjectFlatArea_Heighest: '2100 Sq. Ft.',
+            projctFlatAreaMeasureUnit: 'Carpet',
+
             projectOverview: [
                 {
                     propybuddyRegNumber: 'A8510000022114'
@@ -47,63 +95,27 @@ export class projectsDetails {
             ],
             projectPriceList: [
                 {
-                    projectUnitTypes: [
-                        {
-                            projectPriceListTitle: 'Unit Type',
-                            projectUnitType_One: [
-                                {
-                                    projectUnit_BHK: '3BHK',
-                                    projectUnit_Area: '1480',
-                                }
-                            ],
-                            projectUnitType_Two: [
-                                {
-                                    projectUnit_BHK: '3BHK',
-                                    projectUnit_Area: '1600',
-                                }
-                            ],
-                            projectUnitType_Three: [
-                                {
-                                    projectUnit_BHK: '4BHK',
-                                    proectUnit_Area: '2100',
-                                }
-                            ]
-                        }
-                    ],
-                    projectArea: [
-                        {
-                            projectPriceListTitle: 'Area',
-                            projectAreaType_One: [
-                                {
-                                    projectArea: '1480',
-                                    projectAreaMeasureUnit: '(Carpet)'
-                                }
-                            ],
-                            projectAreaType_Two: [
-                                {
-                                    projectArea: '1600',
-                                    projectAreaMeasureUnit: '(Carpet)'
-                                }
-                            ],
-                            projectAreaType_Three: [
-                                {
-                                    projectArea: '2100',
-                                    projectAreaMeasureUnit: '(Carpet)'
-                                }
-                            ],
-                        }
-                    ],
-                    projectHomePrice: [
-                        {
-                            projectPriceListTitle: 'New Home Price'
-                        },
-                        {
-                            projectUnitPricing_One: '6.00',
-                            projectUnitPricing_Two: '6.70',
-                            projectUnitPricing_Three: '8.90',
-                        }
-                    ]
-                }
+                    name: 'price_list',
+                    label: 'Price List'
+                },
+                {
+                    tableLabel: 'Unit Type',
+                    unitTypeBHK_one: '3BHK 1480',
+                    unitTypeBHK_two: '3BHK 1600',
+                    unitTypeBHK_three: '3BHK 2100',
+                },
+                {
+                    tableLabel: 'Area',
+                    unitTypeArea_one: '1480 Sq. Ft (Carpet)',
+                    unitTypeArea_two: '1600 Sq. Ft (Carpet)',
+                    unitTypeArea_three: '2100 Sq. Ft (Carpet)',
+                },
+                {
+                    tableLabel: 'New Home Price',
+                    unitTypePrice_one: '6.00 Cr',
+                    unitTypePrice_two: '6.69 Cr',
+                    unitTypePrice_three: '8.90 Cr',
+                },
             ],
             projectFloorPlans: [
                 {
@@ -129,30 +141,34 @@ export class projectsDetails {
                 {
                     amenitiesSummary: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores consectetur iure a enim beatae deserunt, quae necessitatibus minus ex vitae numquam voluptatem.'
                 },
+                // {
+                //     amenitiesLists: [
+                //         {
+                //             name: 'Sports',
+                //             amenities: ''
+                //         }
+                //     ]
+                // },
                 {
-                    amenitieNameAndTypes: [
-                        {
-                            amenitieName: 'Sports',
-                            amenitieList: ['Gymnasium', 'Swimming Pool', 'Kids Pool', 'Badminton Court(s)', 'Football', 'Kids Play Areas / Sand Pits', 'Basketball', 'Yoga Area', 'Jogging / Cycling Track', 'Table Tennis']
-                        },
-                        {
-                            amenitieName: 'Convenience',
-                            amenitieList: ['Power Backup', '24*7 Water Supply', 'Lift']
-                        },
-                        {
-                            amenitieName: 'Safety',
-                            amenitieList: ['24 x 7 Security', 'CCTV / Video Surveillance', 'Fire Fighting Systems', 'Intercom Facility']
-                        },
-                        {
-                            amenitieName: 'Leisure',
-                            amenitieList: ['Cafe / Coffee Bar', 'Party Hall', 'Clubhouse', 'Indoor Games', 'Conference Room', 'Spa']
-                        },
-                        {
-                            amenitieName: 'Environment',
-                            amenitieList: ['Rain Water Harvesting', 'Sewage Treatment Plant', 'Large Green Area']
-                        },
-                    ]
-                }
+                    amenitieName: 'Sports',
+                    amenitieList: ['Gymnasium', 'Swimming Pool', 'Kids Pool', 'Badminton Court(s)', 'Football', 'Kids Play Areas / Sand Pits', 'Basketball', 'Yoga Area', 'Jogging / Cycling Track', 'Table Tennis']
+                },
+                {
+                    amenitieName: 'Convenience',
+                    amenitieList: ['Power Backup', '24*7 Water Supply', 'Lift']
+                },
+                {
+                    amenitieName: 'Safety',
+                    amenitieList: ['24 x 7 Security', 'CCTV / Video Surveillance', 'Fire Fighting Systems', 'Intercom Facility']
+                },
+                {
+                    amenitieName: 'Leisure',
+                    amenitieList: ['Cafe / Coffee Bar', 'Party Hall', 'Clubhouse', 'Indoor Games', 'Conference Room', 'Spa']
+                },
+                {
+                    amenitieName: 'Environment',
+                    amenitieList: ['Rain Water Harvesting', 'Sewage Treatment Plant', 'Large Green Area']
+                },
 
             ],
             projectSpecifications: [
@@ -160,77 +176,70 @@ export class projectsDetails {
                     specificationSummary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est atque repellat magnam quae aperiam commodi ducimus explicabo, amet odio sunt distinctio quam, unde facere laboriosam tenetur officia in et numquam exercitationem architecto molestias alias fuga nemo. Asperiores atque ratione assumenda impedit nisi.'
                 },
                 {
-                    roomNamesAndSpecification: [
-                        {
-                            roomNameAndSide: 'Master Bedroom-Walls',
-                            roomSpecification: 'Acrylic Emulsion',
-                        },
-                        {
-                            roomNameAndSide: 'Master Bedroom-Flooring',
-                            roomSpecification: 'Italian/Imported Marble',
-                        },
-                        {
-                            roomNameAndSide: 'Other Bedrooms-Flooring',
-                            roomSpecification: 'Italian/Imported Marble',
-                        },
-                        {
-                            roomNameAndSide: 'Walls',
-                            roomSpecification: 'Acrylic Emulsion',
-                        },
-                        {
-                            roomNameAndSide: 'Living Area-Flooring',
-                            roomSpecification: 'Italian/Imported Marble',
-                        },
-                        {
-                            roomNameAndSide: 'Ceilings',
-                            roomSpecification: 'False Ceiling',
-                        },
-                        {
-                            roomNameAndSide: 'Fittings & Fixtures',
-                            roomSpecification: 'Air Conditioner Fittings',
-                        },
-                        {
-                            roomNameAndSide: 'Bathroom',
-                            roomSpecification: ['Shower Panel', 'Exhaust Fan', 'Premium Bath Fittings'],
-                        },
-                        {
-                            roomNameAndSide: 'Structure',
-                            roomSpecification: 'RCC Frame Structure',
-                        },
-
-                    ]
-                }
+                    roomNameAndSide: 'Master Bedroom-Walls',
+                    roomSpecification: 'Acrylic Emulsion',
+                },
+                {
+                    roomNameAndSide: 'Master Bedroom-Flooring',
+                    roomSpecification: 'Italian/Imported Marble',
+                },
+                {
+                    roomNameAndSide: 'Other Bedrooms-Flooring',
+                    roomSpecification: 'Italian/Imported Marble',
+                },
+                {
+                    roomNameAndSide: 'Walls',
+                    roomSpecification: 'Acrylic Emulsion',
+                },
+                {
+                    roomNameAndSide: 'Living Area-Flooring',
+                    roomSpecification: 'Italian/Imported Marble',
+                },
+                {
+                    roomNameAndSide: 'Ceilings',
+                    roomSpecification: 'False Ceiling',
+                },
+                {
+                    roomNameAndSide: 'Fittings & Fixtures',
+                    roomSpecification: 'Air Conditioner Fittings',
+                },
+                {
+                    roomNameAndSide: 'Bathroom',
+                    roomSpecification: ['Shower Panel', 'Exhaust Fan', 'Premium Bath Fittings'],
+                },
+                {
+                    roomNameAndSide: 'Structure',
+                    roomSpecification: 'RCC Frame Structure',
+                },
             ]
         },
         {
             id: '2',
-            projectName: 'Amaze Tower',
-            projectLocation: 'Andheri East, Mumbai',
-            projectPinCode: '400605',
-            projectPrice: [
-                {
-                    projectPrice_Lowest: '6.80 Cr',
-                    projectPrice_Height: '8.30 Cr'
-                }
-            ],
+            projectName: 'Queen Tower',
+            projectLocation: 'Borivali West, Mumbai',
+            projectPinCode: '400101',
+            projectImage: '../../../assets/images/propyDemo3.jpg',
+            projectPrice:
+            {
+                minPrice: '2.80 Cr',
+                maxPrice: '4.30 Cr'
+            },
             projectStaus: 'Ready To Move',
-            projectSize: [
-                {
-                    projectUnits: '132',
-                    projectArea: '3Acres',
-                }
-            ],
-            projectRoomConfig: [
-                {
-                    projectFlatBHK: '3,4',
-                    porjectFlatArea_Lowest: '1480',
-                    porjectFlatArea_Heighest: '2100',
-                    projctFlatAreaMeasureUnit: 'Carpet'
-                }
-            ],
+            projectSize:
+            {
+                projectUnits: '132 Unit',
+                projectArea: '3 Acres',
+            },
+            projectRoomConfig:
+            {
+                projectFlatBHK: '3,4 BHK',
+                porjectFlatArea_Lowest: '1480 Sq. Ft.',
+                porjectFlatArea_Heighest: '2100 Sq. Ft.',
+                projctFlatAreaMeasureUnit: 'Carpet'
+            },
             projectOverview: [
                 {
-                    propybuddyRegNumber: 'A8510000022114'
+                    propybuddyRegNumber: 'A8510000011776'
                 },
                 {
                     projectRegArea: 'P518000777235'
@@ -241,63 +250,27 @@ export class projectsDetails {
             ],
             projectPriceList: [
                 {
-                    projectUnitTypes: [
-                        {
-                            projectPriceListTitle: 'Unit Type',
-                            projectUnitType_One: [
-                                {
-                                    projectUnit_BHK: '3BHK',
-                                    projectUnit_Area: '1480',
-                                }
-                            ],
-                            projectUnitType_Two: [
-                                {
-                                    projectUnit_BHK: '3BHK',
-                                    projectUnit_Area: '1600',
-                                }
-                            ],
-                            projectUnitType_Three: [
-                                {
-                                    projectUnit_BHK: '4BHK',
-                                    proectUnit_Area: '2100',
-                                }
-                            ]
-                        }
-                    ],
-                    projectArea: [
-                        {
-                            projectPriceListTitle: 'Area',
-                            projectAreaType_One: [
-                                {
-                                    projectArea: '1480',
-                                    projectAreaMeasureUnit: '(Carpet)'
-                                }
-                            ],
-                            projectAreaType_Two: [
-                                {
-                                    projectArea: '1600',
-                                    projectAreaMeasureUnit: '(Carpet)'
-                                }
-                            ],
-                            projectAreaType_Three: [
-                                {
-                                    projectArea: '2100',
-                                    projectAreaMeasureUnit: '(Carpet)'
-                                }
-                            ],
-                        }
-                    ],
-                    projectHomePrice: [
-                        {
-                            projectPriceListTitle: 'New Home Price'
-                        },
-                        {
-                            projectUnitPricing_One: '6.00',
-                            projectUnitPricing_Two: '6.70',
-                            projectUnitPricing_Three: '8.90',
-                        }
-                    ]
-                }
+                    name: 'price_list',
+                    label: 'Price List'
+                },
+                {
+                    tableLabel: 'Unit Type',
+                    unitTypeBHK_one: '3BHK 1480',
+                    unitTypeBHK_two: '3BHK 1600',
+                    unitTypeBHK_three: '3BHK 2100',
+                },
+                {
+                    tableLabel: 'Area',
+                    unitTypeArea_one: '1480 Sq. Ft (Carpet)',
+                    unitTypeArea_two: '1600 Sq. Ft (Carpet)',
+                    unitTypeArea_three: '2100 Sq. Ft (Carpet)',
+                },
+                {
+                    tableLabel: 'New Home Price',
+                    unitTypePrice_one: '2.00 Cr',
+                    unitTypePrice_two: '2.69 Cr',
+                    unitTypePrice_three: '4.30 Cr',
+                },
             ],
             projectFloorPlans: [
                 {
@@ -324,29 +297,25 @@ export class projectsDetails {
                     amenitiesSummary: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores consectetur iure a enim beatae deserunt, quae necessitatibus minus ex vitae numquam voluptatem.'
                 },
                 {
-                    amenitieNameAndTypes: [
-                        {
-                            amenitieName: 'Sports',
-                            amenitieList: ['Gymnasium', 'Swimming Pool', 'Kids Pool', 'Badminton Court(s)', 'Football', 'Kids Play Areas / Sand Pits', 'Basketball', 'Yoga Area', 'Jogging / Cycling Track', 'Table Tennis']
-                        },
-                        {
-                            amenitieName: 'Convenience',
-                            amenitieList: ['Power Backup', '24*7 Water Supply', 'Lift']
-                        },
-                        {
-                            amenitieName: 'Safety',
-                            amenitieList: ['24 x 7 Security', 'CCTV / Video Surveillance', 'Fire Fighting Systems', 'Intercom Facility']
-                        },
-                        {
-                            amenitieName: 'Leisure',
-                            amenitieList: ['Cafe / Coffee Bar', 'Party Hall', 'Clubhouse', 'Indoor Games', 'Conference Room', 'Spa']
-                        },
-                        {
-                            amenitieName: 'Environment',
-                            amenitieList: ['Rain Water Harvesting', 'Sewage Treatment Plant', 'Large Green Area']
-                        },
-                    ]
-                }
+                    amenitieName: 'Sports',
+                    amenitieList: ['Gymnasium', 'Swimming Pool', 'Kids Pool', 'Badminton Court(s)', 'Football', 'Kids Play Areas / Sand Pits', 'Basketball', 'Yoga Area', 'Jogging / Cycling Track', 'Table Tennis']
+                },
+                {
+                    amenitieName: 'Convenience',
+                    amenitieList: ['Power Backup', '24*7 Water Supply', 'Lift']
+                },
+                {
+                    amenitieName: 'Safety',
+                    amenitieList: ['24 x 7 Security', 'CCTV / Video Surveillance', 'Fire Fighting Systems', 'Intercom Facility']
+                },
+                {
+                    amenitieName: 'Leisure',
+                    amenitieList: ['Cafe / Coffee Bar', 'Party Hall', 'Clubhouse', 'Indoor Games', 'Conference Room', 'Spa']
+                },
+                {
+                    amenitieName: 'Environment',
+                    amenitieList: ['Rain Water Harvesting', 'Sewage Treatment Plant', 'Large Green Area']
+                },
 
             ],
             projectSpecifications: [
@@ -354,47 +323,61 @@ export class projectsDetails {
                     specificationSummary: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Est atque repellat magnam quae aperiam commodi ducimus explicabo, amet odio sunt distinctio quam, unde facere laboriosam tenetur officia in et numquam exercitationem architecto molestias alias fuga nemo. Asperiores atque ratione assumenda impedit nisi.'
                 },
                 {
-                    roomNamesAndSpecification: [
-                        {
-                            roomNameAndSide: 'Master Bedroom-Walls',
-                            roomSpecification: 'Acrylic Emulsion',
-                        },
-                        {
-                            roomNameAndSide: 'Master Bedroom-Flooring',
-                            roomSpecification: 'Italian/Imported Marble',
-                        },
-                        {
-                            roomNameAndSide: 'Other Bedrooms-Flooring',
-                            roomSpecification: 'Italian/Imported Marble',
-                        },
-                        {
-                            roomNameAndSide: 'Walls',
-                            roomSpecification: 'Acrylic Emulsion',
-                        },
-                        {
-                            roomNameAndSide: 'Living Area-Flooring',
-                            roomSpecification: 'Italian/Imported Marble',
-                        },
-                        {
-                            roomNameAndSide: 'Ceilings',
-                            roomSpecification: 'False Ceiling',
-                        },
-                        {
-                            roomNameAndSide: 'Fittings & Fixtures',
-                            roomSpecification: 'Air Conditioner Fittings',
-                        },
-                        {
-                            roomNameAndSide: 'Bathroom',
-                            roomSpecification: ['Shower Panel', 'Exhaust Fan', 'Premium Bath Fittings'],
-                        },
-                        {
-                            roomNameAndSide: 'Structure',
-                            roomSpecification: 'RCC Frame Structure',
-                        },
-
-                    ]
-                }
+                    roomNameAndSide: 'Master Bedroom-Walls',
+                    roomSpecification: 'Acrylic Emulsion',
+                },
+                {
+                    roomNameAndSide: 'Master Bedroom-Flooring',
+                    roomSpecification: 'Italian/Imported Marble',
+                },
+                {
+                    roomNameAndSide: 'Other Bedrooms-Flooring',
+                    roomSpecification: 'Italian/Imported Marble',
+                },
+                {
+                    roomNameAndSide: 'Walls',
+                    roomSpecification: 'Acrylic Emulsion',
+                },
+                {
+                    roomNameAndSide: 'Living Area-Flooring',
+                    roomSpecification: 'Italian/Imported Marble',
+                },
+                {
+                    roomNameAndSide: 'Ceilings',
+                    roomSpecification: 'False Ceiling',
+                },
+                {
+                    roomNameAndSide: 'Fittings & Fixtures',
+                    roomSpecification: 'Air Conditioner Fittings',
+                },
+                {
+                    roomNameAndSide: 'Bathroom',
+                    roomSpecification: ['Shower Panel', 'Exhaust Fan', 'Premium Bath Fittings'],
+                },
+                {
+                    roomNameAndSide: 'Structure',
+                    roomSpecification: 'RCC Frame Structure',
+                },
             ]
-        }
+        },
     ]
+
+    getById(id: any): any {
+        let result = null;
+
+        for (let i = 0; i < this.projects.length; i++) {
+            const element = this.projects[i];
+            if (element.id === id) {
+                result = element
+                return result;
+            }
+        }
+        // this.projects.forEach((element: any) => {
+        //     if (element.id === id) {
+        //         result = element
+        //         return result;
+        //     }
+        // })
+        return result
+    }
 }

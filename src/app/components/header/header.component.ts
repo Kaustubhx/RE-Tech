@@ -1,8 +1,7 @@
 import { Component, OnInit, HostListener, Inject, ViewChild, ElementRef } from '@angular/core';
-import { IonModal } from '@ionic/angular';
-import { OverlayEventDetail } from '@ionic/core/components';
-import { filter } from 'rxjs';
+import { IonModal, ModalController } from '@ionic/angular';
 import { filterModalData } from 'src/app/services/filterData.service';
+import { FiltermodalComponent } from '../filtermodal/filtermodal.component';
 
 
 @Component({
@@ -13,33 +12,32 @@ import { filterModalData } from 'src/app/services/filterData.service';
 export class HeaderComponent implements OnInit {
   @ViewChild(IonModal) modal!: IonModal;
 
-  constructor(private filterData: filterModalData) { }
+  constructor(private filterData: filterModalData, private modalCtrl: ModalController) { }
 
-  filters: any;
-  
   slideOptsOne = {
     autoplay: true
   }
 
-  back() {
-    this.modal.dismiss(null, 'back');
+  async presentModal() {
+    const modal = await this.modalCtrl.create({
+      component: FiltermodalComponent
+    });
+    await modal.present();
   }
 
-  exitLocation() {
-    this.modal.dismiss(null, 'back');
-  }
-
-  // onWillDismiss(event: Event) {
-  //   const ev = event as CustomEvent<OverlayEventDetail<string>>;
-  //   if (ev.detail.role === 'confirm') {
-  //     this.message = `Hello, ${ev.detail.data}!`;
-  //   }
-  // }
-
+  filters: any;
 
   ngOnInit(): void {
     this.filters = this.filterData;
-    console.log(this.filters.filterData[0].placeholder)
+    for (let i = 0; i < this.filters.filterData.length; i++) {
+      const element = this.filters.filterData[i];
+      // console.log(element)
+    }
+
+    // for (const items of this.filterData) {
+    //   console.log(items)
+    // }
+    // console.log(this.filters)
   }
 }
 

@@ -1,0 +1,17 @@
+<ion-row id="floatingForm" class="">
+    <ion-row class="py-2 px-3 xs:px-5 flex-col rounded-lg w-full">
+        <ion-row class="items-center space-x-3">
+            <fa-icon [icon]="['fas', 'phone-alt']"
+                class="flex items-center justify-center border-2 rounded-full border-black h-7 w-7"></fa-icon>
+            <ion-text class="font-semibold">Contact our Real Estate Experts</ion-text>
+            <fa-icon class="!ml-auto" [icon]="['fas', 'times']" (click)="dismissModal()"></fa-icon>
+        </ion-row>
+        <ion-row class="p-4 my-2 shadow-xl border-2 border-white rounded-lg flex-col space-y-3">
+            <ion-input placeholder="Name" class="reqDetailInputs"></ion-input>
+            <ion-input placeholder="Phone Number" class="reqDetailInputs"></ion-input>
+            <ion-button class="reqDetailBtn">
+                Request Details
+            </ion-button>
+        </ion-row>
+    </ion-row>
+</ion-row>

@@ -24,8 +24,14 @@ import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import { faBuilding } from '@fortawesome/free-solid-svg-icons';
 import { faBath } from '@fortawesome/free-solid-svg-icons';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faCrosshairs } from '@fortawesome/free-solid-svg-icons';
 import { faHeadphonesAlt } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
 
@@ -43,6 +49,11 @@ import { ProjecttemplatesComponent } from './components/projecttemplate/projectt
 import { ProjectdetailsComponent } from './components/projectdetails/projectdetails.component';
 import { DetailsformComponent } from './components/detailsform/detailsform.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ExplorepageComponent } from './pages/explorepage/explorepage.component';
+import { FiltermodalComponent } from './components/filtermodal/filtermodal.component';
+import { LocationmodalComponent } from './components/locationmodal/locationmodal.component';
+import { WhatsAppmodalComponent } from './components/whatsappmodal/whatsappmodal.component';
+import { ContactmodalComponent } from './components/contactmodal/contactmodal.component';
 
 
 @NgModule({
@@ -60,6 +71,11 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     ProjectdetailsComponent,
     DetailsformComponent,
     SidebarComponent,
+    ExplorepageComponent,
+    FiltermodalComponent,
+    LocationmodalComponent,
+    WhatsAppmodalComponent,
+    ContactmodalComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +92,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 export class AppModule {
 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faChevronDown, faLocationArrow, faHome, faRupeeSign, faLongArrowAltRight, farHeart, faWhatsapp, faArrowLeft, faMapMarkerAlt, faPhoneAlt, faEllipsisV, faBuilding, faBath, faUserCircle, faEye, faHeadphonesAlt);
+    library.addIcons(faChevronDown, faLocationArrow, faHome, faRupeeSign, faLongArrowAltRight, farHeart, faWhatsapp, faArrowLeft, faMapMarkerAlt, faPhoneAlt, faEllipsisV, faBuilding, faBath, faUserCircle, faEye, faHeadphonesAlt, faCrosshairs, faTimes, faFacebook, faLinkedin, faTwitter, faInstagram);
   }
 }

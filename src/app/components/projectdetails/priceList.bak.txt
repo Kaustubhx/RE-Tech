@@ -1,0 +1,58 @@
+projectPriceList: [
+                {
+                    projectUnitTypes: [
+                        {
+                            projectPriceListTitle: 'Unit Type',
+                            projectUnitType_One: [
+                                {
+                                    projectUnit_BHK: '3BHK',
+                                    projectUnit_Area: '1480',
+                                }
+                            ],
+                            projectUnitType_Two: [
+                                {
+                                    projectUnit_BHK: '3BHK',
+                                    projectUnit_Area: '1600',
+                                }
+                            ],
+                            projectUnitType_Three: [
+                                {
+                                    projectUnit_BHK: '4BHK',
+                                    proectUnit_Area: '2100',
+                                }
+                            ]
+                        }
+                    ],
+                    projectArea: [
+                        {
+                            projectPriceListTitle: 'Area',
+                            projectAreaType_One:
+                            {
+                                projectArea: '1480',
+                                projectAreaMeasureUnit: '(Carpet)'
+                            },
+                            projectAreaType_Two:
+                            {
+                                projectArea: '1600',
+                                projectAreaMeasureUnit: '(Carpet)'
+                            },
+
+                            projectAreaType_Three:
+                            {
+                                projectArea: '2100',
+                                projectAreaMeasureUnit: '(Carpet)'
+                            },
+                        }
+                    ],
+                    projectHomePrice: [
+                        {
+                            projectPriceListTitle: 'New Home Price'
+                        },
+                        {
+                            projectUnitPricing_One: '6.00',
+                            projectUnitPricing_Two: '6.70',
+                            projectUnitPricing_Three: '8.90',
+                        }
+                    ]
+                }
+            ],

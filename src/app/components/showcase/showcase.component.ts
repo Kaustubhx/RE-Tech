@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { SwiperComponent } from 'swiper/angular';
+import { ModalController } from '@ionic/angular';
+import { HomePageDetails } from 'src/app/services/homePageData.service';
+import { WhatsAppmodalComponent } from '../whatsappmodal/whatsappmodal.component';
 
 
 @Component({
@@ -9,11 +11,13 @@ import { SwiperComponent } from 'swiper/angular';
 })
 export class ShowcaseComponent implements OnInit {
 
-  constructor() {
+  constructor(private homePageDetails: HomePageDetails, private modalCtrl: ModalController) {
   }
 
+  propertyCard: any;
   ngOnInit(): void {
-
+    this.propertyCard = this.homePageDetails.homePageData[0].property_card
+    console.log(this.propertyCard)
   }
 
   projectSlideOpt = {
@@ -40,55 +44,13 @@ export class ShowcaseComponent implements OnInit {
     }
   }
 
-  demoProjects = [
-    {
-      id: '1',
-      projectName: 'Amaze Tower',
-      projectImg: '../../../assets/images/propyDemo2.jpg',
-      projectLocation: 'Wagle Estate, Thane',
-      priceTo: '46L',
-      priceFrom: '58.5L',
-      projectStatus: 'New Launch',
-      roomVariation: '3,4 BHK',
-      roomSize: '331 Sq.Ft (Carpet)',
-      alt: 'Demo1'
-    },
-    {
-      id: '2',
-      projectName: 'Queen Cottage',
-      projectImg: '../../../assets/images/propyDemo1.jpg',
-      projectLocation: 'Palghar West, Thane',
-      priceTo: '23L',
-      priceFrom: '34L',
-      projectStatus: 'New Launch',
-      roomVariation: '2,3 BHK',
-      roomSize: '331 Sq.Ft (Carpet)',
-      alt: 'Demo2'
-    },
-    {
-      id: '3',
-      projectName: 'Amaze Heights',
-      projectImg: '../../../assets/images/propyDemo3.jpg',
-      projectLocation: 'Palghar West, Thane',
-      priceTo: '23L',
-      priceFrom: '34L',
-      projectStatus: 'New Launch',
-      roomVariation: '2,3 BHK',
-      roomSize: '331 Sq.Ft (Carpet)',
-      alt: 'Demo2'
-    },
-    {
-      id: '3',
-      projectName: 'Queen Tower',
-      projectImg: '../../../assets/images/propyDemo4.jpg',
-      projectLocation: 'Palghar West, Thane',
-      priceTo: '23L',
-      priceFrom: '34L',
-      projectStatus: 'New Launch',
-      roomVariation: '2,3 BHK',
-      roomSize: '331 Sq.Ft (Carpet)',
-      alt: 'Demo2'
-    }
-  ]
+  async presentWhatsAppModal() {
+    const modal = await this.modalCtrl.create({
+      component: WhatsAppmodalComponent,
+      breakpoints: [0, 0.25, 0.5,],
+      initialBreakpoint: 0.40,
+    });
+    await modal.present();
+  }
 
 }
